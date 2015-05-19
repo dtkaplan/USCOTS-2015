@@ -1,0 +1,45 @@
+# Basics of Data Science
+## in R and RStudio
+
+### Danny Kaplan (Macalester College)
+
+### Nicholas Horton (Amherst College)
+
+# Welcome
+
+1. Our goals and strategy
+2. Forming working groups
+    * Find complementary skills to compose a group
+    * Make sure that every group has a working, up-to-date version of R and RStudio
+    * RStudio server accounts for the workshop
+    * Over time, get every individual who wants R on their own machine to have it.
+        * Short-term alternative: screen sharing in a common RStudio session
+3. Getting to work!
+
+## Goals and Strategy
+
+From the abstract :
+
+* Identify key capacities for instructors and students to "think with data."
+* Topics: 
+    * Data wrangling 
+    * Working reproducibly
+    * Visualizing
+    * Web-scraping
+    
+## Our approach
+
+As with Project MOSAIC
+
+* Use a concise set of operations that correspond to ~~statistics~~ data wrangling and visualization.
+* Use notation that works in a similar fashion across different types of operation
+    * In MOSAIC: descriptive stats, stat modeling, graphics, simulation 
+    * In MOSAIC: oriented around the *formula* notation in R: 
+        e.g. `wage ~ sex + sector`
+        
+    
+    For data science: a very small but powerful set of operators
+    
+
+
+Three kinds of objects in R you need to know ...

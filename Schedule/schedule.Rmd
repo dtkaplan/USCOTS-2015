@@ -1,0 +1,106 @@
+---
+output:
+  knitrBootstrap::bootstrap_document:
+    title: "Test file"
+    theme: slate
+    highlight: sunburst
+    theme.chooser: TRUE
+    highlight.chooser: TRUE
+    menu: FALSE
+---
+
+<div style="background-image: url(data-computing.jpg);">
+<h3 style="color: white;">Basics of Data Science in R & RStudio</h3>
+<h4 style="color: white;">&nbsp;&nbsp;USCOTS 2015</h4>
+<h4 style="color: white;">&nbsp;&nbsp;Workshop leaders: Daniel Kaplan & Nick Horton</h4></div>
+
+# Workshop Schedule
+
+* Wednesday May 27: 8:30am - 4:00pm
+    Morning and afternoon sessions with a break for lunch.
+* Thursday May 28: 8:30am - 12:00pm
+    Morning session only
+
+
+## Wednesday AM
+
+### Prior to the start. 
+
+Come a bit before the official 8:30 am start to get help with these.
+
+* Making sure you have access to the software.
+    * [R 3.1 or more recent](http://cran.rstudio.com/)
+    * [RStudio preview edition](http://www.rstudio.com/products/rstudio/download/preview/)    
+    or, alternatively
+    * Login credentials for the RStudio server being used for this workshop. DRAFT: NEED LINK [More info about the server]()
+
+* Open up **communal notes** for workshop. [Link to Google Doc](https://docs.google.com/document/d/1XEYhUZj9C468VRAl_SoGuUHL5UVtz0JU6PF5iCPuE6c/edit?usp=sharing) Add comments and questions as the workshop progresses.
+* Participant **skill survey** (for forming teams). [Link to survey](https://docs.google.com/forms/d/1zQBF_3PIs7OHLn9srhr5odgqL0p9yxsi8OjnmqRk43k/viewform). After you press "submit", you'll see a page with a link to "Edit your response." Open that in your browser and **leave it open** so that you can fill in your team name when you have formed it.
+
+<iframe src="https://docs.google.com/spreadsheets/d/1PUzAAIvn6Y6r7Y5ozPSRdwuFiHYcuYGdAH-iCOl7EBI/pubhtml?widget=true&amp;headers=false" height="300px" width="100%"></iframe>
+
+### Welcome! 
+
+1. Brief review of setup and plans [DTK, 10]
+2. Introduce your neighbors, and form teams for later. Two to four people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15]
+
+## RStudio
+
+Quick introduction to RStudio [NJH, 20]
+    
+* Give these commands to open our template file in the editor.
+    ```r
+library(DCF)
+editWebFile("http://www.mosaic-web.org/go/datasets/DCF/USCOTS-01.Rmd")
+```
+* Save it to your own directory.
+* Compile it to HTML.
+* Publish it. RPubs ID: USCOTS-2015  Password: Written on board. <!-- benchtree -->
+
+## Visualization Quick Start
+
+1. Data frames.  We'll work with ones from `mosaicData`, `NHANES` and `DCF` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`
+#. Some grammar [DTK, 15]
+    * Frame
+    * Glyph
+    * Aesthetic (graphical property)
+    * Glyph-ready data
+#. Map variables to aesthetics with `mScatter()`, `mBar()`, `mDistribution()`, `mWorldMap()`
+    ```r
+devtools::install_github("dtkaplan/DCFinteractive")
+DCFinteractive::mScatter( your_data_frame )   
+```
+#. Activity: Visualizing a data frame
+    * Construct a visualization of variables in a data frame.
+    * Cut and paste the corresponding `ggplot2` command as a chunk into your Rmd file. 
+    * Publish to RPubs (user ID: USCOTS-2015)
+#. [Data visualization cheat sheet](http://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf) as handout, or follow the link.
+
+## Wrangling Quick Start
+
+1. Minimal R [DTK, 5] THE SLIDES WILL GO HERE.
+    * data frames
+    * functions and arguments
+    * piping
+#. Wrangling data verbs vs reduction verbs vs transformation verbs. [DTK, 10] THESE WILL BE A FEW SLIDES.  REFER TO THE CHEAT SHEET.
+#. Activity: What happened to Mary and Jane? [DTK, 15] THIS WILL BE USCOTS-02.Rmd
+    * `filter()`, piping, `select()`, `arrange()`
+    * filter by name, by sex, by year range.
+    * `group_by()` and `summarise()`
+        * Add up selected names over the years.
+        * How many babies in each year?
+        * How many distinct names in each year?
+        * Entropy?
+#. Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20]
+#. [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+
+
+## Wednesday PM
+
+
+## Thursday AM
+
+Now there's some stuff here.
+
+# Wrapping up
