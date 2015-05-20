@@ -2,17 +2,21 @@
 output:
   knitrBootstrap::bootstrap_document:
     title: "Test file"
-    theme: slate
-    highlight: sunburst
+    theme: readable
+    highlight: highlightjs
     theme.chooser: TRUE
     highlight.chooser: TRUE
-    menu: FALSE
+    menu: TRUE
 ---
 
 <div style="background-image: url(data-computing.jpg);">
 <h3 style="color: white;">Basics of Data Science in R & RStudio</h3>
 <h4 style="color: white;">&nbsp;&nbsp;USCOTS 2015</h4>
 <h4 style="color: white;">&nbsp;&nbsp;Workshop leaders: Daniel Kaplan & Nick Horton</h4></div>
+
+```{r include=FALSE}
+knitr::opts_chunk(tidy=FALSE)
+```
 
 # Workshop Schedule
 
@@ -44,7 +48,7 @@ Come a bit before the official 8:30 am start to get help with these.
 1. Brief review of setup and plans [DTK, 10]
 2. Introduce your neighbors, and form teams for later. Two to four people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15]
 
-## RStudio
+### RStudio
 
 Quick introduction to RStudio [NJH, 20]
     
@@ -57,7 +61,7 @@ editWebFile("http://www.mosaic-web.org/go/datasets/DCF/USCOTS-01.Rmd")
 * Compile it to HTML.
 * Publish it. RPubs ID: USCOTS-2015  Password: Written on board. <!-- benchtree -->
 
-## Visualization Quick Start
+### Visualization Quick Start
 
 1. Data frames.  We'll work with ones from `mosaicData`, `NHANES` and `DCF` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`
 #. Some grammar [DTK, 15]
@@ -76,7 +80,7 @@ DCFinteractive::mScatter( your_data_frame )
     * Publish to RPubs (user ID: USCOTS-2015)
 #. [Data visualization cheat sheet](http://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf) as handout, or follow the link.
 
-## Wrangling Quick Start
+### Wrangling Quick Start
 
 1. Minimal R [DTK, 5] THE SLIDES WILL GO HERE.
     * data frames
