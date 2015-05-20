@@ -50,12 +50,17 @@ Come a bit before the official 8:30 am start to get help with these.
 
 ### RStudio
 
-Quick introduction to RStudio [NJH, 20 min]
-    
-* Give these commands to open our template file in the editor.
+* Quick introduction to RStudio [NJH, 5 min]
+
+[OUTLINE TO BE MADE BY NICK]
+
+* panes, tabs, console, editor?, open a project
+
+
+* RMarkdown: Give these commands to open our template file in the editor.
     ```r
-library(DCF)
-editWebFile("http://www.mosaic-web.org/go/datasets/DCF/USCOTS-01.Rmd")
+download.file("http://www.mosaic-web.org/go/datasets/DCF/USCOTS-01.Rmd", dest="USCOTS-01.Rmd")
+file.edit("USCOTS-01.Rmd")
 ```
 * Save it to your own directory.
 * Compile it to HTML.
