@@ -22,11 +22,6 @@ require(mosaic)
 require(DCF)
 ```
 
-```{r echo=FALSE, results="asis"}
-cat("Rmd source file:")
-includeSourceDocuments()
-```
-
 ```{r include=FALSE}
 # Some customization.  You can alter or delete as desired (if you know what you are doing).
 

@@ -898,13 +898,12 @@ Basics of Data Science in R &amp; RStudio
   Workshop leaders: Daniel Kaplan &amp; Nick Horton
 </h4>
 </div>
-<h1>Workshop Schedule</h1>
+<h1>Workshop Times</h1>
 <ul>
 <li>Wednesday May 27: 8:30am - 4:00pm Morning and afternoon sessions with a break for lunch (participants are on their own for lunch).</li>
 <li>Thursday May 28: 8:30am - 12:00pm Morning session only</li>
 </ul>
-<h2>Wednesday AM</h2>
-<h3>Prior to the start.</h3>
+<h2>Prior to the Wednesday start.</h2>
 <p>Come a bit before the official 8:30 am start to get help with these.</p>
 <ul>
 <li>Making sure you have access to the software.
@@ -918,26 +917,30 @@ Basics of Data Science in R &amp; RStudio
 </ul>
 <iframe src="https://docs.google.com/spreadsheets/d/1PUzAAIvn6Y6r7Y5ozPSRdwuFiHYcuYGdAH-iCOl7EBI/pubhtml?widget=true&amp;headers=false" height="300px" width="100%">
 </iframe>
-<h3>Welcome!</h3>
+<h1>Workshop Outline</h1>
+<h2>Welcome!</h2>
 <ol style="list-style-type: decimal">
 <li>Brief review of setup and plans [DTK, 10 min]</li>
 <li>Introduce your neighbors, and form teams for later. Two to four people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]</li>
 </ol>
-<h3>RStudio</h3>
+<h2>RStudio</h2>
 <ul>
 <li>Quick introduction to RStudio [NJH, 5 min]</li>
 </ul>
-<p>[OUTLINE TO BE MADE BY NICK]</p>
+<p>[OUTLINE TO BE MADE BY NICK, THEN DELETE THIS BULLET POINTS]</p>
 <ul>
-<li><p>panes, tabs, console, editor?, open a project</p></li>
-<li><p>RMarkdown: Give these commands to open our template file in the editor.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download.file</span>(<span class="st">&quot;http://www.mosaic-web.org/go/datasets/DCF/USCOTS-01.Rmd&quot;</span>, <span class="dt">dest=</span><span class="st">&quot;USCOTS-01.Rmd&quot;</span>)
-<span class="kw">file.edit</span>(<span class="st">&quot;USCOTS-01.Rmd&quot;</span>)</code></pre></li>
-<li>Save it to your own directory.</li>
-<li>Compile it to HTML.</li>
-<li><p>Publish it. RPubs ID: USCOTS-2015 Password: Written on board. <!-- benchtree --></p></li>
+<li>panes, tabs, console, editor?,</li>
+<li>Lead through opening a project. open a project</li>
+<li>loading packages, install if necessary
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
+</div></li>
+<li>bringing in data from a package</li>
 </ul>
-<h3>Visualization Quick Start</h3>
+<h2>Visualization Quick Start</h2>
 <ol style="list-style-type: decimal">
 <li>Data frames. We'll work with ones from <code>mosaicData</code>, <code>NHANES</code> and <code>DCF</code> to begin with. Variables and cases. Quick summaries: <code>glimpse()</code>, <code>nrow()</code>, <code>names()</code></li>
 <li>Some grammar [DTK, 15 min]
@@ -948,15 +951,31 @@ Basics of Data Science in R &amp; RStudio
 <li>Glyph-ready data</li>
 </ul></li>
 <li><p>Map variables to aesthetics with <code>mScatter()</code>, <code>mBar()</code>, <code>mDistribution()</code>, <code>mWorldMap()</code></p>
-<pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;dtkaplan/DCFinteractive&quot;</span>)
-DCFinteractive::<span class="kw">mScatter</span>( your_data_frame )   </code></pre></li>
+<pre class="sourceCode r"><code class="sourceCode r">DCFinteractive::<span class="kw">mScatter</span>( your_data_frame )   </code></pre></li>
 <li>Activity: Visualizing a data frame
 <ul>
 <li>Construct a visualization of variables in a data frame.</li>
+<li>RMarkdown: Give these commands to open our template file in the editor.
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">download.file("http://tiny.cc/dcf/USCOTS-01.Rmd",
+  dest="USCOTS-01.Rmd")
+file.edit("USCOTS-01.Rmd")</code></pre>
+</div></li>
+</ul></li>
+</ol>
+<ul>
+<li>Compile it to HTML.</li>
+<li>Publish it. RPubs ID: USCOTS-2015 Password: Written on board. <!-- benchtree -->
+<ul>
 <li>Cut and paste the corresponding <code>ggplot2</code> command as a chunk into your Rmd file.</li>
 <li>Publish to RPubs (user ID: USCOTS-2015)</li>
 </ul></li>
-<li><p><a href="http://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf">Data visualization cheat sheet</a> as handout, or follow the link.</p></li>
+</ul>
+<ol>
+<li><a href="http://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf">Data visualization cheat sheet</a> as handout, or follow the link.</li>
 </ol>
 <h3>Wrangling Quick Start</h3>
 <ol style="list-style-type: decimal">
@@ -982,10 +1001,47 @@ DCFinteractive::<span class="kw">mScatter</span>( your_data_frame )   </code></p
 <li>Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20 min]</li>
 <li><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Data Wrangling Cheat Sheet</a></li>
 </ol>
-<h2>Wednesday PM</h2>
-<h2>Thursday AM</h2>
-<p>Now there's some stuff here.</p>
-# Wrapping up
+<h2>Practice</h2>
+<p>Drill on Bike Sharing: Give out Rmarkdown scaffold [DTK] [20 min]</p>
+<ul>
+<li>Which station has the most rentals?</li>
+<li>Which station has the most rentals on Saturday?</li>
+<li>Which pair of stations has the biggest traffic?</li>
+<li>Are weekdays different from weekends? For each station?</li>
+</ul>
+<h2>Example: Airline flights database</h2>
+<p>activity: work in groups to do something with dplyr? (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH] (join) plus more practice (20 minutes)</p>
+<h2>Data Scraping Quick Start</h2>
+<ul>
+<li>simple data scraping: reading HTML tables (nuclear reactors) [DTK] Activity?? (20 minutes)</li>
+<li>Other sources of data. Something easy they can do: NYC open data, CDC. At the level of downloading CSV files. [DTK to find example from Data Computing book.] Bike sharing? Restaurants? Scaffold 70% for them and have them do one. [30 min work, 10 min presentation]</li>
+</ul>
+<h2>Shiny</h2>
+<ul>
+<li>brief introduction to Shiny via Markdown [NJH] (10 minutes)</li>
+<li>Activity: customize a default shiny file. [DTK, 30 min]
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">download.file("http://tiny.cc/dcf/USCOTS-Shiny.Rmd",
+      dest="USCOTS-Shiny.Rmd")
+file.edit("USCOTS-Shiny.Rmd")</code></pre>
+</div></li>
+</ul>
+<h2>Maps: For self study</h2>
+<p>Homework for the evening.<br />* Make a choropleth map. <code>mWorldMap()</code>, <code>mUSMap()</code> [DTK] From Data Computing example * Leaflet bicycle map</p>
+<h2>Models and Machine Learning [DTK]</h2>
+<p>Link to Danny's notes WILL GO HERE</p>
+<ul>
+<li>glyph-ready is also model-ready [DTK]</li>
+<li>lm() glm()</li>
+<li>“machine learning”</li>
+<li>unsupervised: car data clustering</li>
+<li>supervised: CART</li>
+</ul>
+<h2>Text mining 101 [NJH]</h2>
+Link to Nick's notes WILL GO HERE
 </div>
 </div>
 <div class="navbar navbar-fixed-bottom navbar-inverse">
