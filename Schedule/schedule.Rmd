@@ -15,7 +15,7 @@ output:
 <h4 style="color: white;">&nbsp;&nbsp;Workshop leaders: Daniel Kaplan & Nick Horton</h4></div>
 
 ```{r include=FALSE}
-knitr::opts_chunk(tidy=FALSE)
+knitr::opts_chunk$set(tidy=FALSE)
 ```
 
 # Workshop Schedule
