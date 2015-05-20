@@ -17,7 +17,7 @@ output:
 # Workshop Schedule
 
 * Wednesday May 27: 8:30am - 4:00pm
-    Morning and afternoon sessions with a break for lunch.
+    Morning and afternoon sessions with a break for lunch (participants are on their own for lunch).
 * Thursday May 28: 8:30am - 12:00pm
     Morning session only
 
@@ -29,7 +29,7 @@ output:
 Come a bit before the official 8:30 am start to get help with these.
 
 * Making sure you have access to the software.
-    * [R 3.1 or more recent](http://cran.rstudio.com/)
+    * [R 3.1.1 or more recent](http://cran.rstudio.com/)
     * [RStudio preview edition](http://www.rstudio.com/products/rstudio/download/preview/)    
     or, alternatively
     * Login credentials for the RStudio server being used for this workshop. DRAFT: NEED LINK [More info about the server]()
@@ -41,12 +41,12 @@ Come a bit before the official 8:30 am start to get help with these.
 
 ### Welcome! 
 
-1. Brief review of setup and plans [DTK, 10]
-2. Introduce your neighbors, and form teams for later. Two to four people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15]
+1. Brief review of setup and plans [DTK, 10 min]
+2. Introduce your neighbors, and form teams for later. Two to four people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]
 
 ## RStudio
 
-Quick introduction to RStudio [NJH, 20]
+Quick introduction to RStudio [NJH, 20 min]
     
 * Give these commands to open our template file in the editor.
     ```r
@@ -60,7 +60,7 @@ editWebFile("http://www.mosaic-web.org/go/datasets/DCF/USCOTS-01.Rmd")
 ## Visualization Quick Start
 
 1. Data frames.  We'll work with ones from `mosaicData`, `NHANES` and `DCF` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`
-#. Some grammar [DTK, 15]
+#. Some grammar [DTK, 15 min]
     * Frame
     * Glyph
     * Aesthetic (graphical property)
@@ -78,12 +78,12 @@ DCFinteractive::mScatter( your_data_frame )
 
 ## Wrangling Quick Start
 
-1. Minimal R [DTK, 5] THE SLIDES WILL GO HERE.
+1. Minimal R [DTK, 5 min] THE SLIDES WILL GO HERE.
     * data frames
     * functions and arguments
     * piping
-#. Wrangling data verbs vs reduction verbs vs transformation verbs. [DTK, 10] THESE WILL BE A FEW SLIDES.  REFER TO THE CHEAT SHEET.
-#. Activity: What happened to Mary and Jane? [DTK, 15] THIS WILL BE USCOTS-02.Rmd
+#. Wrangling data verbs vs reduction verbs vs transformation verbs. [DTK, 10 min] THESE WILL BE A FEW SLIDES.  REFER TO THE CHEAT SHEET.
+#. Activity: What happened to Mary and Jane? [DTK, 15 min] THIS WILL BE USCOTS-02.Rmd
     * `filter()`, piping, `select()`, `arrange()`
     * filter by name, by sex, by year range.
     * `group_by()` and `summarise()`
@@ -91,7 +91,7 @@ DCFinteractive::mScatter( your_data_frame )
         * How many babies in each year?
         * How many distinct names in each year?
         * Entropy?
-#. Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20]
+#. Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20 min]
 #. [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 
