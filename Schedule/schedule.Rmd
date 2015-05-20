@@ -45,7 +45,7 @@ Come a bit before the official 8:30 am start to get help with these.
 
 ### Welcome! 
 
-1. Brief review of setup and plans [DTK, 10 min]
+1. Brief review of setup and plans [DTK and NJH, 10 min]
 2. Introduce your neighbors, and form teams for later. Two to four people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]
 
 ### RStudio
