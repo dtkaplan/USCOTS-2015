@@ -1,22 +1,35 @@
 ---
-title: "Home page for USCOTS 2015"
-author: "Daniel Kaplan"
-date: "May 21, 2015"
-output: html_document
+title: "Data Science Basics with R and RStudio"
+author: "Nicholas Hortan & Daniel Kaplan"
+date: "USCOTS 2015.  May 27-28"
+output:
+  knitrBootstrap::bootstrap_document:
+    title: "Test file"
+    theme: readable
+    highlight: highlightjs
+    theme.chooser: TRUE
+    highlight.chooser: TRUE
+    menu: TRUE
 ---
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+# Home Page
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Some Resources
 
-```{r}
-summary(cars)
-```
+1. [Outline of the workshop](Schedule/schedule.html)
+2. RStudio cloud server: <http://macalester.edu/rstudio>
+    * See the [welcome letter](welcome.html) for your account ID
+    * The password is your account ID
+    * The account expires on Sunday 31 May --- the end of USCOTS
+3. Website for *Data Computing* book. (To be posted.)
 
-You can also embed plots, for example:
+## Contact Information
 
-```{r, echo=FALSE}
-plot(cars)
-```
+### Workshop leaders:
+    * Nicholas Horton <horton@amherst.edu>
+    * Danny Kaplan <kaplan@macalester.edu>
+    
+### Participants
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+To be posted as we get permission from the participants to do so.  If you want to provide web links, etc., please do so.
+
