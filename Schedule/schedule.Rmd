@@ -18,7 +18,7 @@ output:
 knitr::opts_chunk$set(tidy=FALSE)
 ```
 
-# Workshop Times
+## Workshop Times
 
 * Wednesday May 27: 8:30am - 4:00pm
     Morning and afternoon sessions with a break for lunch (participants are on their own for lunch).
@@ -33,22 +33,29 @@ Come a bit before the official 8:30 am start to get help with these.
     * [R 3.1.1 or more recent](http://cran.rstudio.com/)
     * [RStudio preview edition](http://www.rstudio.com/products/rstudio/download/preview/)    
     or, alternatively
+    * update and install additional packages
+        ```{r eval=FALSE}
+update.packages()
+install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13"))
+devtools::install_github("ProjectMOSAIC/mosaic", ref="beta")
+devtools::install_github("dtkaplan/DCF")
+devtools::install_github("dtkaplan/DCFinteractive")
+```
     * Login credentials for the RStudio server being used for this workshop. DRAFT: NEED LINK [More info about the server]()
 
 * Open up **communal notes** for workshop. [Link to Google Doc](https://docs.google.com/document/d/1XEYhUZj9C468VRAl_SoGuUHL5UVtz0JU6PF5iCPuE6c/edit?usp=sharing) Add comments and questions as the workshop progresses.
 * Participant **skill survey** (for forming teams). [Link to survey](https://docs.google.com/forms/d/1zQBF_3PIs7OHLn9srhr5odgqL0p9yxsi8OjnmqRk43k/viewform). After you press "submit", you'll see a page with a link to "Edit your response." Open that in your browser and **leave it open** so that you can fill in your team name when you have formed it.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1PUzAAIvn6Y6r7Y5ozPSRdwuFiHYcuYGdAH-iCOl7EBI/pubhtml?widget=true&amp;headers=false" height="300px" width="100%"></iframe>
+<!-- <iframe src="https://docs.google.com/spreadsheets/d/1PUzAAIvn6Y6r7Y5ozPSRdwuFiHYcuYGdAH-iCOl7EBI/pubhtml?widget=true&amp;headers=false" height="300px" width="100%"></iframe> -->
 
+## Workshop outline
 
-# Workshop Outline
-
-## Welcome! 
+### Welcome! 
 
 1. Brief review of setup and plans [DTK and NJH, 10 min]
-2. Introduce your neighbors, and form teams for later. Two to four people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]
+2. Introduce your neighbors, and form teams for later. Two to three people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]
 
-## RStudio
+### RStudio
 
 * Quick introduction to RStudio [NJH, 5 min]
 
@@ -57,34 +64,35 @@ Come a bit before the official 8:30 am start to get help with these.
 * panes, tabs, console, editor?, 
 * Lead through opening a project.  open a project
 * loading packages, install if necessary
-    ```{r eval=FALSE}
-devtools::install_github("dtkaplan/DCFinteractive")
-```
 * bringing in data from a package
+* Data frames.  We'll work with ones from `mosaicData`, `DCF`, and `nycflights13` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`
 
-## Visualization Quick Start
 
-1. Data frames.  We'll work with ones from `mosaicData`, `NHANES` and `DCF` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`
-#. Some grammar [DTK, 15 min]
+### Visualization Quick Start
+
+1. Some grammar [DTK, 15 min]
     * Frame
     * Glyph
     * Aesthetic (graphical property)
     * Glyph-ready data
-#. Map variables to aesthetics with `mScatter()`, `mBar()`, `mDistribution()`, `mWorldMap()`
-    ```r
+#. Map variables to aesthetics with `mScatter()`, `mBar()`, `mDistribution()`, `mWorldMap()` [Note to DTK: why not use mplot here?]
+    ```{r eval=FALSE}
 DCFinteractive::mScatter( your_data_frame )   
 ```
-#. Activity: Visualizing a data frame
-    * Construct a visualization of variables in a data frame.
-    * RMarkdown: Give these commands to open our template file in the editor.
+#. Activity: Visualizing a data frame [DTK, 10 min]
+    * Construct a visualization of variables in a data frame. [Note to DTK: need more scaffolding here (list of interesting datasets, how to see the codebooks, etc.)]
+    
+### R Markdown Quick Start
+1. Quick intro to R Markdown and reproducible analysis [Prezi](https://prezi.com/e7wtfnacj9ub/intro-to-r-markdown/) [NJH, 10 min]
+2. Activity (visualization redux): Give these commands to open our template file in the editor.
     ```{r eval=FALSE}
 download.file("http://tiny.cc/dcf/USCOTS-01.Rmd",
               dest="USCOTS-01.Rmd")
 file.edit("USCOTS-01.Rmd")
 ```
-* Compile it to HTML.
-* Publish it. RPubs ID: USCOTS-2015  Password: Written on board. <!-- benchtree -->
-    * Cut and paste the corresponding `ggplot2` command as a chunk into your Rmd file. 
+3. Compile it to HTML.
+4. Publish it. RPubs ID: USCOTS-2015  Password: Written on board. <!-- benchtree -->
+    * Cut and paste the corresponding `ggplot2` command from `Show Expression` output in `mplot()` as a chunk into your Rmd file. 
     * Publish to RPubs (user ID: USCOTS-2015)
 #. [Data visualization cheat sheet](http://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf) as handout, or follow the link.
 
@@ -106,7 +114,7 @@ file.edit("USCOTS-01.Rmd")
 #. Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20 min]
 #. [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
-## Practice
+### Case study: Bike sharing
 
 Drill on Bike Sharing: Give out Rmarkdown scaffold [DTK] [20 min]
 
@@ -115,16 +123,16 @@ Drill on Bike Sharing: Give out Rmarkdown scaffold [DTK] [20 min]
 * Which pair of stations has the biggest traffic?
 * Are weekdays different from weekends?  For each station?
 
-## Example: Airline flights database
+### Case study: Airline flights database
 
 activity: work in groups to do something with dplyr?  (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH]  (join) plus more practice  (20 minutes)
 
-## Data Scraping Quick Start
+### Data Scraping Quick Start
 
 * simple data scraping: reading HTML tables (nuclear reactors) [DTK] Activity??   (20 minutes)
 * Other sources of data. Something easy they can do: NYC open data, CDC.  At the level of downloading CSV files. [DTK to find example from Data Computing book.]  Bike sharing? Restaurants?  Scaffold 70% for them and have them do one. [30 min work, 10 min presentation]
 
-## Shiny
+### Shiny and dynamic graphics
 
 * brief introduction to Shiny via Markdown [NJH] (10 minutes)
 * Activity: customize a default shiny file.  [DTK, 30 min]
@@ -134,15 +142,14 @@ download.file("http://tiny.cc/dcf/USCOTS-Shiny.Rmd",
 file.edit("USCOTS-Shiny.Rmd")
 ```
 
-## Maps: For self study
+### Maps: For self study
 
-Homework for the evening.  
 * Make a choropleth map. `mWorldMap()`, `mUSMap()`  [DTK] From Data Computing example
 * Leaflet bicycle map
 
-## Models and Machine Learning [DTK]
+### Models and Machine Learning: for self study
 
-Link to Danny's notes WILL GO HERE
+Link to Danny's notes WILL GO HERE  [DTK]
 
 * glyph-ready is also model-ready [DTK]
 * lm() glm()
@@ -150,6 +157,6 @@ Link to Danny's notes WILL GO HERE
 * unsupervised: car data clustering
 * supervised: CART
 
-## Text mining 101 [NJH]
+### Text mining 101: for self study [NJH]
 
 Link to Nick's notes WILL GO HERE

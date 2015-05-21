@@ -6,25 +6,6 @@
   <meta name="generator" content="pandoc" />
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
-  <style type="text/css">
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; }
-code > span.dt { color: #902000; }
-code > span.dv { color: #40a070; }
-code > span.bn { color: #40a070; }
-code > span.fl { color: #40a070; }
-code > span.ch { color: #4070a0; }
-code > span.st { color: #4070a0; }
-code > span.co { color: #60a0b0; font-style: italic; }
-code > span.ot { color: #007020; }
-code > span.al { color: #ff0000; font-weight: bold; }
-code > span.fu { color: #06287e; }
-code > span.er { color: #ff0000; font-weight: bold; }
-  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- jQuery -->
@@ -898,7 +879,7 @@ Basics of Data Science in R &amp; RStudio
   Workshop leaders: Daniel Kaplan &amp; Nick Horton
 </h4>
 </div>
-<h1>Workshop Times</h1>
+<h2>Workshop Times</h2>
 <ul>
 <li>Wednesday May 27: 8:30am - 4:00pm Morning and afternoon sessions with a break for lunch (participants are on their own for lunch).</li>
 <li>Thursday May 28: 8:30am - 12:00pm Morning session only</li>
@@ -910,20 +891,30 @@ Basics of Data Science in R &amp; RStudio
 <ul>
 <li><a href="http://cran.rstudio.com/">R 3.1.1 or more recent</a></li>
 <li><a href="http://www.rstudio.com/products/rstudio/download/preview/">RStudio preview edition</a><br />or, alternatively</li>
+<li>update and install additional packages
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">update.packages()
+install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13"))
+devtools::install_github("ProjectMOSAIC/mosaic", ref="beta")
+devtools::install_github("dtkaplan/DCF")
+devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
+</div></li>
 <li>Login credentials for the RStudio server being used for this workshop. DRAFT: NEED LINK <a href="">More info about the server</a></li>
 </ul></li>
 <li>Open up <strong>communal notes</strong> for workshop. <a href="https://docs.google.com/document/d/1XEYhUZj9C468VRAl_SoGuUHL5UVtz0JU6PF5iCPuE6c/edit?usp=sharing">Link to Google Doc</a> Add comments and questions as the workshop progresses.</li>
 <li>Participant <strong>skill survey</strong> (for forming teams). <a href="https://docs.google.com/forms/d/1zQBF_3PIs7OHLn9srhr5odgqL0p9yxsi8OjnmqRk43k/viewform">Link to survey</a>. After you press &quot;submit&quot;, you'll see a page with a link to &quot;Edit your response.&quot; Open that in your browser and <strong>leave it open</strong> so that you can fill in your team name when you have formed it.</li>
 </ul>
-<iframe src="https://docs.google.com/spreadsheets/d/1PUzAAIvn6Y6r7Y5ozPSRdwuFiHYcuYGdAH-iCOl7EBI/pubhtml?widget=true&amp;headers=false" height="300px" width="100%">
-</iframe>
-<h1>Workshop Outline</h1>
-<h2>Welcome!</h2>
+<!-- <iframe src="https://docs.google.com/spreadsheets/d/1PUzAAIvn6Y6r7Y5ozPSRdwuFiHYcuYGdAH-iCOl7EBI/pubhtml?widget=true&amp;headers=false" height="300px" width="100%"></iframe> -->
+<h2>Workshop outline</h2>
+<h3>Welcome!</h3>
 <ol style="list-style-type: decimal">
 <li>Brief review of setup and plans [DTK and NJH, 10 min]</li>
-<li>Introduce your neighbors, and form teams for later. Two to four people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]</li>
+<li>Introduce your neighbors, and form teams for later. Two to three people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]</li>
 </ol>
-<h2>RStudio</h2>
+<h3>RStudio</h3>
 <ul>
 <li>Quick introduction to RStudio [NJH, 5 min]</li>
 </ul>
@@ -931,18 +922,12 @@ Basics of Data Science in R &amp; RStudio
 <ul>
 <li>panes, tabs, console, editor?,</li>
 <li>Lead through opening a project. open a project</li>
-<li>loading packages, install if necessary
-<div class="row">
-<button class="source R toggle btn btn-xs btn-primary">
-<span class="glyphicon glyphicon-chevron-down"></span> R source
-</button>
-<pre style=""><code class="source r">devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
-</div></li>
+<li>loading packages, install if necessary</li>
 <li>bringing in data from a package</li>
+<li>Data frames. We'll work with ones from <code>mosaicData</code>, <code>DCF</code>, and <code>nycflights13</code> to begin with. Variables and cases. Quick summaries: <code>glimpse()</code>, <code>nrow()</code>, <code>names()</code></li>
 </ul>
-<h2>Visualization Quick Start</h2>
+<h3>Visualization Quick Start</h3>
 <ol style="list-style-type: decimal">
-<li>Data frames. We'll work with ones from <code>mosaicData</code>, <code>NHANES</code> and <code>DCF</code> to begin with. Variables and cases. Quick summaries: <code>glimpse()</code>, <code>nrow()</code>, <code>names()</code></li>
 <li>Some grammar [DTK, 15 min]
 <ul>
 <li>Frame</li>
@@ -950,31 +935,36 @@ Basics of Data Science in R &amp; RStudio
 <li>Aesthetic (graphical property)</li>
 <li>Glyph-ready data</li>
 </ul></li>
-<li><p>Map variables to aesthetics with <code>mScatter()</code>, <code>mBar()</code>, <code>mDistribution()</code>, <code>mWorldMap()</code></p>
-<pre class="sourceCode r"><code class="sourceCode r">DCFinteractive::<span class="kw">mScatter</span>( your_data_frame )   </code></pre></li>
-<li>Activity: Visualizing a data frame
+<li>Map variables to aesthetics with <code>mScatter()</code>, <code>mBar()</code>, <code>mDistribution()</code>, <code>mWorldMap()</code> [Note to DTK: why not use mplot here?]
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">DCFinteractive::mScatter( your_data_frame )   </code></pre>
+</div></li>
+<li>Activity: Visualizing a data frame [DTK, 10 min]
 <ul>
-<li>Construct a visualization of variables in a data frame.</li>
-<li>RMarkdown: Give these commands to open our template file in the editor.
+<li>Construct a visualization of variables in a data frame. [Note to DTK: need more scaffolding here (list of interesting datasets, how to see the codebooks, etc.)]</li>
+</ul></li>
+</ol>
+<h3>R Markdown Quick Start</h3>
+<ol style="list-style-type: decimal">
+<li>Quick intro to R Markdown and reproducible analysis <a href="https://prezi.com/e7wtfnacj9ub/intro-to-r-markdown/">Prezi</a> [NJH, 10 min]</li>
+<li>Activity (visualization redux): Give these commands to open our template file in the editor.
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
 <pre style=""><code class="source r">download.file("http://tiny.cc/dcf/USCOTS-01.Rmd",
-  dest="USCOTS-01.Rmd")
+      dest="USCOTS-01.Rmd")
 file.edit("USCOTS-01.Rmd")</code></pre>
 </div></li>
-</ul></li>
-</ol>
-<ul>
 <li>Compile it to HTML.</li>
 <li>Publish it. RPubs ID: USCOTS-2015 Password: Written on board. <!-- benchtree -->
 <ul>
-<li>Cut and paste the corresponding <code>ggplot2</code> command as a chunk into your Rmd file.</li>
+<li>Cut and paste the corresponding <code>ggplot2</code> command from <code>Show Expression</code> output in <code>mplot()</code> as a chunk into your Rmd file.</li>
 <li>Publish to RPubs (user ID: USCOTS-2015)</li>
 </ul></li>
-</ul>
-<ol>
 <li><a href="http://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf">Data visualization cheat sheet</a> as handout, or follow the link.</li>
 </ol>
 <h3>Wrangling Quick Start</h3>
@@ -1001,7 +991,7 @@ file.edit("USCOTS-01.Rmd")</code></pre>
 <li>Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20 min]</li>
 <li><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Data Wrangling Cheat Sheet</a></li>
 </ol>
-<h2>Practice</h2>
+<h3>Case study: Bike sharing</h3>
 <p>Drill on Bike Sharing: Give out Rmarkdown scaffold [DTK] [20 min]</p>
 <ul>
 <li>Which station has the most rentals?</li>
@@ -1009,14 +999,14 @@ file.edit("USCOTS-01.Rmd")</code></pre>
 <li>Which pair of stations has the biggest traffic?</li>
 <li>Are weekdays different from weekends? For each station?</li>
 </ul>
-<h2>Example: Airline flights database</h2>
+<h3>Case study: Airline flights database</h3>
 <p>activity: work in groups to do something with dplyr? (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH] (join) plus more practice (20 minutes)</p>
-<h2>Data Scraping Quick Start</h2>
+<h3>Data Scraping Quick Start</h3>
 <ul>
 <li>simple data scraping: reading HTML tables (nuclear reactors) [DTK] Activity?? (20 minutes)</li>
 <li>Other sources of data. Something easy they can do: NYC open data, CDC. At the level of downloading CSV files. [DTK to find example from Data Computing book.] Bike sharing? Restaurants? Scaffold 70% for them and have them do one. [30 min work, 10 min presentation]</li>
 </ul>
-<h2>Shiny</h2>
+<h3>Shiny and dynamic graphics</h3>
 <ul>
 <li>brief introduction to Shiny via Markdown [NJH] (10 minutes)</li>
 <li>Activity: customize a default shiny file. [DTK, 30 min]
@@ -1029,10 +1019,13 @@ file.edit("USCOTS-01.Rmd")</code></pre>
 file.edit("USCOTS-Shiny.Rmd")</code></pre>
 </div></li>
 </ul>
-<h2>Maps: For self study</h2>
-<p>Homework for the evening.<br />* Make a choropleth map. <code>mWorldMap()</code>, <code>mUSMap()</code> [DTK] From Data Computing example * Leaflet bicycle map</p>
-<h2>Models and Machine Learning [DTK]</h2>
-<p>Link to Danny's notes WILL GO HERE</p>
+<h3>Maps: For self study</h3>
+<ul>
+<li>Make a choropleth map. <code>mWorldMap()</code>, <code>mUSMap()</code> [DTK] From Data Computing example</li>
+<li>Leaflet bicycle map</li>
+</ul>
+<h3>Models and Machine Learning: for self study</h3>
+<p>Link to Danny's notes WILL GO HERE [DTK]</p>
 <ul>
 <li>glyph-ready is also model-ready [DTK]</li>
 <li>lm() glm()</li>
@@ -1040,7 +1033,7 @@ file.edit("USCOTS-Shiny.Rmd")</code></pre>
 <li>unsupervised: car data clustering</li>
 <li>supervised: CART</li>
 </ul>
-<h2>Text mining 101 [NJH]</h2>
+<h3>Text mining 101: for self study [NJH]</h3>
 Link to Nick's notes WILL GO HERE
 </div>
 </div>
