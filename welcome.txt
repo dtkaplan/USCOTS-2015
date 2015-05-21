@@ -1,0 +1,37 @@
+Dear USCOTS Workshop Participants,            May 21, 2015
+ 
+You are receiving this message because you are listed as being registered for "Basics of Data Science in R and R-Studio".  We are looking forward to having you at our workshop next week at USCOTS. 
+
+
+This is a 1.5 day workshop, Wednesday, May 27 that starts @ 8:30 a.m. (full day) and May 28 @ 8:30 a.m. (half day, ending at noon) (unfortunately, the workshop does not provide lunch) 
+
+Abstract: This workshop is intended to provide an introduction to data science tools and approaches for instructors with a background in R. The goal is to help identify key capacities for instructors and students to "think with data" while answering a statistical question. Key topics will include data wrangling (operations to get data in the right form for graphics), reproducibility, web-scraping, and constructing static and dynamic graphics from data. Suggested background: some background using or teaching with R.
+
+
+Some advance work on your part will help to make the workshop more effective.  We would appreciate it if you could do the following steps:
+
+(1) complete the (brief) pre-workshop survey at:
+
+https://docs.google.com/forms/d/1zQBF_3PIs7OHLn9srhr5odgqL0p9yxsi8OjnmqRk43k/viewform
+
+(2) (re)install R and RStudio with some additional add-on packages
+
+You'll need to:
+
+install or update R (3.1.1 or later): http://cran.r-project.org/
+install the Preview release of RStudio: http://www.rstudio.com/products/rstudio/download/preview/
+
+run the commands:
+
+update.packages() 
+install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13")) 
+devtools::install_github("ProjectMOSAIC/mosaic", ref="beta") 
+devtools::install_github("dtkaplan/DCF") devtools::install_github("dtkaplan/DCFinteractive")
+
+
+We plan to have participants use the tools and approaches that we will be describing.  So it will be very helpful for you to prepare a laptop in advance.  (We will also be making temporary accounts available on a cloud-based RStudio server: please contact me if you won't have a laptop and would like to get started with this in advance.)
+
+
+Again, we look forward to meeting/seeing you at Penn State.  If you have any questions, please don’t hesitate to email us at nhorton@amherst.edu or Daniel Kaplan <dtkaplan@gmail.com>
+
+Nick and Danny
