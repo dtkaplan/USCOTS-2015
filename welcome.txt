@@ -1,33 +1,31 @@
-Dear USCOTS Workshop Participants,            May 21, 2015
- 
-We look forward to meeting you at the *Basics of Data Science* workshop next week at USCOTS. As you know, this is a 1.5 day workshop, Wednesday, May 27 that starts @ 8:30 a.m. (full day) and May 28 @ 8:30 a.m. (half day, ending at noon). Lunch on both days is on your own.
+Dear USCOTS Workshop Participants, 
 
-The workshop is "hands-on", so some advance work on your part will help to make the workshop more effective.  Please do as much as you can of the following:
+We look forward to meeting you at the Basics of Data Science workshop next week at USCOTS. As you know, this is a 1.5 day workshop, Wednesday, May 27 that starts @ 8:30 a.m. (full day) and May 28 @ 8:30 a.m. (half day, ending at noon). Lunch on both days is on your own.
 
-(1) Complete the (brief) pre-workshop skill survey at [here](https://docs.google.com/forms/d/1zQBF_3PIs7OHLn9srhr5odgqL0p9yxsi8OjnmqRk43k/viewform)
+The workshop is "hands on", so some advance work on your part will help to make the workshop more effective. Please do as much as you can of the following:
 
-(2) Get access to a recent version of R and RStudio. You have **two alternatives** here.  Either one will do nicely. (If this step is confusing to you, don't worry.  We can get you set up at the workshop.  But the more people who take care of this in advance, the sooner we can get to the content of the workshop.)
+(1) Complete the (brief) pre-workshop skill survey here.
 
-* The **just a browser** option: We have made temporary accounts available on a cloud-based RStudio server at <macalester.edu/rstudio>. You can get your login credentials by referring to [this spreadsheet](https://docs.google.com/spreadsheets/d/1vhooM3QG7R7VstLH-asaRprkgpJIlyxOMms_o6fLmso/edit?usp=sharing)  If you're not in the spreadsheet, please contact Nick.
-* The **my own laptop** option: install R and RStudio on your own laptop. You will need up-to-date versions of both R and RStudio. 
-    * install or update R (3.1.1 or later). Go to <http://cran.r-project.org/>.
-    * install the Preview release of RStudio: <http://www.rstudio.com/products/rstudio/download/preview/>
+(2) Get access to a recent version of R and RStudio. You have two alternatives here. Either one will do nicely. (If this step is confusing to you, don’t worry. We can get you set up at the workshop. But the more people who take care of this in advance, the sooner we can get to the content of the workshop.)
 
-(3) Install some additional add-on R packages.  To do this, run the following commands:
-```{r}
+	• The just a browser option: We have made temporary accounts available on a cloud-based RStudio server at http://www.macalester.edu/rstudio. You can get your login credentials by referring to this spreadsheet If you’re not in the spreadsheet, please contact Nick.
+	• The my own laptop option: install R and RStudio on your own laptop. You will need up-to-date versions of both R and RStudio. 
+		• install or update R (3.1.1 or later). Go to http://cran.r-project.org/.
+		• install the Preview release of RStudio: http://www.rstudio.com/products/rstudio/download/preview/
+(3) Install some additional add-on R packages. To do this, run the following commands:
+
 update.packages() 
 install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13")) 
 devtools::install_github("ProjectMOSAIC/mosaic", ref="beta") 
 devtools::install_github("dtkaplan/DCF") 
 devtools::install_github("dtkaplan/DCFinteractive")
-```
 
 If you are able to set up the software on your laptop, that will reduce the load on the server and speed up responses for everyone. 
 
-At the workshop, we will be giving you the preview edition of a book: *Data Computing*.  If you would like to glance through the contents before the workshop, a PDF version of the first several chapters is available [here](https://www.dropbox.com/s/ox1ebhgjwbqo6q5/DataComputingChapters.pdf?dl=0). You will need a password to open it: `branchtree`
+At the workshop, we will be giving you the preview edition of a book: Data Computing. If you would like to glance through the contents before the workshop, a PDF version of the first several chapters is available here. You will need a password to open it: branchtree
 
-Again, we look forward to meeting/seeing you at Penn State.  If you have any questions, please don’t hesitate to email Nick at <nhorton@amherst.edu> or Danny at <dtkaplan@gmail.com>
+Again, we look forward to meeting/seeing you at Penn State. If you have any questions, please don’t hesitate to email Nick at nhorton@amherst.edu or Danny at dtkaplan@gmail.com
 
---- Nick and Danny
+—- Nick and Danny
 
-*Abstract*: This workshop is intended to provide an introduction to data science tools and approaches for instructors with a background in R. The goal is to help identify key capacities for instructors and students to "think with data" while answering a statistical question. Key topics will include data wrangling (operations to get data in the right form for graphics), reproducibility, web-scraping, and constructing static and dynamic graphics from data. Suggested background: some background using or teaching with R.
+Abstract: This workshop is intended to provide an introduction to data science tools and approaches for instructors with a background in R. The goal is to help identify key capacities for instructors and students to “think with data” while answering a statistical question. Key topics will include data wrangling (operations to get data in the right form for graphics), reproducibility, web-scraping, and constructing static and dynamic graphics from data. Suggested background: some background using or teaching with R.
