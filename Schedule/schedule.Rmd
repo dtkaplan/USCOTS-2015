@@ -30,10 +30,14 @@ knitr::opts_chunk$set(tidy=FALSE)
 Come a bit before the official 8:30 am start to get help with these.
 
 * Making sure you have access to the software.
-    * [R 3.1.1 or more recent](http://cran.rstudio.com/)
-    * [RStudio preview edition](http://www.rstudio.com/products/rstudio/download/preview/)    
-    or, alternatively
-    * update and install additional packages
+    * [**R 3.1.1** or more recent](http://cran.rstudio.com/) as well as [**RStudio** preview edition](http://www.rstudio.com/products/rstudio/download/preview/)    
+    or, alternatively,
+    * use a web browser to access the RStudio **server** being provided for this workshop at <macalester.edu/rstudio>.  You will need login credentials which will be provided at the start of the workshop. (N.B., this server will be available only for the duration of USCOTS 2015.  We will show you how to preserve your files for later use on another system.)
+    
+    
+    Whichever way you access R and RStudio, please
+    
+    * update and install additional packages, by executing these lines in the R console in RStudio:
         ```{r eval=FALSE}
 update.packages()
 install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13"))
@@ -41,7 +45,6 @@ devtools::install_github("ProjectMOSAIC/mosaic", ref="beta")
 devtools::install_github("dtkaplan/DCF")
 devtools::install_github("dtkaplan/DCFinteractive")
 ```
-    * Login credentials for the RStudio server being used for this workshop. DRAFT: NEED LINK [More info about the server]()
 
 * Open up **communal notes** for workshop. [Link to Google Doc](https://docs.google.com/document/d/1XEYhUZj9C468VRAl_SoGuUHL5UVtz0JU6PF5iCPuE6c/edit?usp=sharing) Add comments and questions as the workshop progresses.
 * Participant **skill survey** (for forming teams). [Link to survey](https://docs.google.com/forms/d/1zQBF_3PIs7OHLn9srhr5odgqL0p9yxsi8OjnmqRk43k/viewform). After you press "submit", you'll see a page with a link to "Edit your response." Open that in your browser and **leave it open** so that you can fill in your team name when you have formed it.
@@ -53,7 +56,7 @@ devtools::install_github("dtkaplan/DCFinteractive")
 ### Welcome! 
 
 1. Brief review of setup and plans [DTK and NJH, 10 min]
-2. Introduce your neighbors, and form teams for later. Two to three people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]
+2. Introduce your neighbors, and form teams for workshop activities. [Follow the instructions, here.](form_teams.html) Two to three people per team, with a nice mix of skills. Give your team a name so that we can refer to it. [15 min]
 
 ### RStudio
 
