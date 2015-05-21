@@ -1,2 +1,5 @@
 # USCOTS-2015
-Notes and resources for the USCOTS 2015 workshop: Basics of Data Science with R and RStudio
+
+*Basics of Data Science in R and RStudio* is a 1.5 day workshop held at the USCOTS 2015 meeting.
+
+This site provides notes and resources for the workshop
