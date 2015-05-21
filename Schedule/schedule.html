@@ -890,7 +890,7 @@ Basics of Data Science in R &amp; RStudio
 <li>Making sure you have access to the software.
 <ul>
 <li><a href="http://cran.rstudio.com/"><strong>R 3.1.1</strong> or more recent</a> as well as <a href="http://www.rstudio.com/products/rstudio/download/preview/"><strong>RStudio</strong> preview edition</a><br />or, alternatively,</li>
-<li>use a web browser to access the RStudio <strong>server</strong> being provided for this workshop at <macalester.edu/rstudio>. You will need login credentials which will be provided at the start of the workshop. (N.B., this server will be available only for the duration of USCOTS 2015. We will show you how to preserve your files for later use on another system.)</li>
+<li>use a web browser to access the RStudio <strong>server</strong> being provided for this workshop at <a href="http://macalester.edu/rstudio" class="uri">http://macalester.edu/rstudio</a>. You will need login credentials which will be provided at the start of the workshop. (N.B., this server will be available only for the duration of USCOTS 2015. We will show you how to preserve your files for later use on another system.)</li>
 </ul>
 <p>Whichever way you access R and RStudio, please</p>
 <ul>
@@ -914,7 +914,7 @@ devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
 <h3>Welcome!</h3>
 <ol style="list-style-type: decimal">
 <li>Brief review of setup and plans [DTK and NJH, 10 min]</li>
-<li>Introduce your neighbors, and form teams for later. Two to three people per team, with nice mix of skills. Give your team a name so that we can refer to it. [15 min]</li>
+<li>Introduce your neighbors, and form teams for workshop activities. <a href="form_teams.html">Follow the instructions, here.</a> Two to three people per team, with a nice mix of skills. Give your team a name so that we can refer to it. [15 min]</li>
 </ol>
 <h3>RStudio</h3>
 <ul>
@@ -937,12 +937,14 @@ devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
 <li>Aesthetic (graphical property)</li>
 <li>Glyph-ready data</li>
 </ul></li>
-<li>Map variables to aesthetics with <code>mScatter()</code>, <code>mBar()</code>, <code>mDistribution()</code>, <code>mWorldMap()</code> [Note to DTK: why not use mplot here?]
+<li>Map variables to aesthetics with <code>mScatter()</code>, <code>mDistribution()</code>, <code>mBar()</code> (<code>mWorldMap()</code>) [note: lattice graphics with <code>mPlot()</code>]
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">DCFinteractive::mScatter( your_data_frame )   </code></pre>
+<pre style=""><code class="source r">require(DCF)
+require(DCFinteractive)
+DCFinteractive::mScatter( your_data_frame )   </code></pre>
 </div></li>
 <li>Activity: Visualizing a data frame [DTK, 10 min]
 <ul>
@@ -1006,7 +1008,7 @@ file.edit("USCOTS-01.Rmd")</code></pre>
 <h3>Data Scraping Quick Start</h3>
 <ul>
 <li>simple data scraping: reading HTML tables (nuclear reactors) [DTK] Activity?? (20 minutes)</li>
-<li>Other sources of data. Something easy they can do: NYC open data, CDC. At the level of downloading CSV files. [DTK to find example from Data Computing book.] Bike sharing? Restaurants? Scaffold 70% for them and have them do one. [30 min work, 10 min presentation]</li>
+<li>Other sources of data. Something easy they can do: NYC open data, CDC. At the level of downloading CSV files. [DTK to find example from Data Computing book.] Bike sharing? Restaurants? Scaffold 70% for them and have them do one. Difference between source API and what you write in R. [30 min work, 10 min presentation]</li>
 </ul>
 <h3>Shiny and dynamic graphics</h3>
 <ul>

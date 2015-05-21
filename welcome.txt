@@ -8,7 +8,7 @@ The workshop is "hands-on", so some advance work on your part will help to make 
 
 (2) Get access to a recent version of R and RStudio. You have **two alternatives** here.  Either one will do nicely. (If this step is confusing to you, don't worry.  We can get you set up at the workshop.  But the more people who take care of this in advance, the sooner we can get to the content of the workshop.)
 
-* The **just a browser** option: We have made temporary accounts available on a cloud-based RStudio server at <macalester.edu/rstudio>. You can get your login credentials by referring to [this spreadsheet](https://docs.google.com/spreadsheets/d/1vhooM3QG7R7VstLH-asaRprkgpJIlyxOMms_o6fLmso/edit?usp=sharing)  If you're not in the spreadsheet, please contact Nick.
+* The **just a browser** option: We have made temporary accounts available on a cloud-based RStudio server at <http://www.macalester.edu/rstudio>. You can get your login credentials by referring to [this spreadsheet](https://docs.google.com/spreadsheets/d/1vhooM3QG7R7VstLH-asaRprkgpJIlyxOMms_o6fLmso/edit?usp=sharing)  If you're not in the spreadsheet, please contact Nick.
 * The **my own laptop** option: install R and RStudio on your own laptop. You will need up-to-date versions of both R and RStudio. 
     * install or update R (3.1.1 or later). Go to <http://cran.r-project.org/>.
     * install the Preview release of RStudio: <http://www.rstudio.com/products/rstudio/download/preview/>
