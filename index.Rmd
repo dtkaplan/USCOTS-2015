@@ -12,24 +12,34 @@ output:
     menu: TRUE
 ---
 
-# Home Page
+# Basics of Data Science 
+##in R and RStudio
 
-## Some Resources
+-------------
+
+A two-day workshop held in conjunction with the [USCOTS 2015] meeting. Supported in part by a grant to Project MOSAIC from the National Science Foundation (NSF DUE-0920350) and from the Howard Hughes Medical Institute.
+
+May 27-28, 2015 at Pennsylvania State University
+
+-------------
+
+### Some Resources
 
 1. [Outline of the workshop](Schedule/schedule.html)
 2. RStudio cloud server: <http://macalester.edu/rstudio>
     * See the [welcome letter](welcome.html) for your account ID
     * The password is your account ID
     * The account expires on Sunday 31 May --- the end of USCOTS
-3. Website for *Data Computing* book. (To be posted.)
+3. The first several chapters of the [*Data Computing* book](https://www.dropbox.com/s/ox1ebhgjwbqo6q5/DataComputingChapters.pdf?dl=0) as a PDF. You will need a password to open it: `branchtree`.  At the publisher's insistence, please **do not** copy or distribute the PDF or the password.
 
-## Contact Information
+### Contact Information
 
-### Workshop leaders:
-    * Nicholas Horton <horton@amherst.edu>
-    * Danny Kaplan <kaplan@macalester.edu>
+#### Workshop leaders:
     
-### Participants
+* Nicholas Horton <horton@amherst.edu>
+* Danny Kaplan <kaplan@macalester.edu>
+    
+#### Participants
 
 To be posted as we get permission from the participants to do so.  If you want to provide web links, etc., please do so.
 
