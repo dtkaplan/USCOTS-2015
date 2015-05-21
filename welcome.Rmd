@@ -1,4 +1,4 @@
-Dear USCOTS Workshop Participants,            May 21, 2015
+Dear USCOTS Workshop Participants,          
  
 We look forward to meeting you at the *Basics of Data Science* workshop next week at USCOTS. As you know, this is a 1.5 day workshop, Wednesday, May 27 that starts @ 8:30 a.m. (full day) and May 28 @ 8:30 a.m. (half day, ending at noon). Lunch on both days is on your own.
 
@@ -13,10 +13,13 @@ The workshop is "hands-on", so some advance work on your part will help to make 
     * install or update R (3.1.1 or later). Go to <http://cran.r-project.org/>.
     * install the Preview release of RStudio: <http://www.rstudio.com/products/rstudio/download/preview/>
 
-(3) Install some additional add-on R packages.  To do this, run the following commands:
-```{r}
+(3) Install some additional add-on R packages.  To do this, run the following commands by cutting-and-pasting the following into the RStudio console:
+```{r eval=FALSE}
 update.packages() 
-install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13")) 
+install.packages(c("devtools", "mosaic", "tidyr", "dplyr", 
+                   "ggvis", "rmarkdown", "shiny", "haven", 
+                   "mosaicData", "manipulate", "babynames", 
+                   "nycflights13")) 
 devtools::install_github("ProjectMOSAIC/mosaic", ref="beta") 
 devtools::install_github("dtkaplan/DCF") 
 devtools::install_github("dtkaplan/DCFinteractive")
@@ -26,8 +29,10 @@ If you are able to set up the software on your laptop, that will reduce the load
 
 At the workshop, we will be giving you the preview edition of a book: *Data Computing*.  If you would like to glance through the contents before the workshop, a PDF version of the first several chapters is available [here](https://www.dropbox.com/s/ox1ebhgjwbqo6q5/DataComputingChapters.pdf?dl=0). You will need a password to open it: `branchtree`
 
-Again, we look forward to meeting/seeing you at Penn State.  If you have any questions, please don’t hesitate to email Nick at <nhorton@amherst.edu> or Danny at <dtkaplan@gmail.com>
+Again, we look forward to meeting/seeing you at Penn State.  If you have any questions, please don’t hesitate to email Nick at <nhorton@amherst.edu> or Danny at <dtkaplan@gmail.com>.  
 
 --- Nick and Danny
+
+Here is a [link to an outline of the workshop](http://dtkaplan.github.io/USCOTS-2015) to be activated soon.
 
 *Abstract*: This workshop is intended to provide an introduction to data science tools and approaches for instructors with a background in R. The goal is to help identify key capacities for instructors and students to "think with data" while answering a statistical question. Key topics will include data wrangling (operations to get data in the right form for graphics), reproducibility, web-scraping, and constructing static and dynamic graphics from data. Suggested background: some background using or teaching with R.

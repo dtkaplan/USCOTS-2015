@@ -1,0 +1,88 @@
+---
+title: "Visualization Quick Start"
+author: "Daniel Kaplan"
+date: "May 21, 2015"
+output: ioslides_presentation
+---
+
+## Glyphs and Data
+
+In its original sense, in archeology, a glyph is a carved symbol.
+
+Heiro**glyph** | Mayan **glyph**
+---------------|----------------
+![Heiroglyph](Images/hand.jpg) | ![Mayan glyph](Images/mayan-glyph.png) 
+
+## Data Glyph
+
+A data glyph is also a mark, but one that encodes the value of variables.  
+
+EXAMPLES HERE error bars, dots, bars.
+
+## Data Glyph Properties: Aesthetics
+
+Definition of aethetic in the original sense
+
+dots: x, y, color, size, shape, ...
+bars: x, ybottom, ytop, color, ...
+error bars: x, ycenter, ytop, ybottom, ...
+Give some examples of aesthetics for one of the glyphs exemplified above.
+
+## Glyph-Ready Data
+
+Glyph-ready data has this form:
+
+* There is one row for each data glyph to be drawn. 
+* The variables are those that make up the features of the glyph.
+
+### The Goal of Data Wrangling
+
+* Get your data into glyph-ready form.
+* "Glyph-ready" is also model-ready, descriptive-stats ready, and so on.
+
+## Graphics syntax in base graphics, lattice, ...
+
+```r
+xyplot(y ~ x, data=your_data_table)
+
+## The rest.
+
+* Data tables have rows and columns: cases and variables
+* Glyph-ready data 
+
+1. Some grammar [DTK, 15 min]
+    * Frame
+    * Glyph
+    * Aesthetic (graphical property)
+    * Glyph-ready data
+#. Map variables to aesthetics with `mScatter()`,  `mDistribution()`, `mBar()` (`mWorldMap()`)  [note: lattice graphics with `mPlot()`]
+    ```{r eval=FALSE}
+require(DCF)
+require(DCFinteractive)
+DCFinteractive::mScatter( your_data_frame )   
+
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
