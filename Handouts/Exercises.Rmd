@@ -1,0 +1,36 @@
+---
+title: "Exercises"
+author: "Daniel Kaplan"
+date: "May 23, 2015"
+output: html_document
+---
+
+# Exercises for USCOTS 2015
+
+## Graphics Quick Start
+
+### One
+
+Make this (awful) graphic with `mScatter()` using the `NHANES::NHANES` data.
+
+```{r include=FALSE}
+require(NHANES)
+require(DCFinteractive)
+```
+
+```{r}
+require(NHANES)
+data(NHANES, package = "NHANES")
+require(DCFinteractive)
+```
+
+```{r eval=FALSE}
+DCFinteractive::mScatter(NHANES)
+```
+
+```{r echo=FALSE, warning=FALSE}
+ggplot(data=NHANES,aes(x=Age,y=BMI))+geom_point()+aes(colour=Depressed)+facet_wrap(~Smoke100n,ncol=4) 
+```
+
+
+## Wrangling Quick Start

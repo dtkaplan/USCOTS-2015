@@ -1,0 +1,19 @@
+---
+title: "Wrangling Quick Start"
+author: "Daniel Kaplan"
+date: "Data Computing"
+output: ioslides_presentation
+---
+
+```{r include=FALSE}
+library(ggplot2)
+library(dplyr)
+```
+
+Wrangling data verbs vs reduction verbs vs transformation verbs. [DTK, 10 min] THESE WILL BE A FEW SLIDES.  REFER TO THE CHEAT SHEET.
+
+* `group_by()` and `summarise()`
+* Add up selected names over the years.
+* How many babies in each year?
+* How many distinct names in each year?
+* Entropy?

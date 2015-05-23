@@ -1,9 +1,14 @@
 ---
 title: "Visualization Quick Start"
 author: "Daniel Kaplan"
-date: "May 21, 2015"
+date: "Data Computing"
 output: ioslides_presentation
 ---
+
+```{r include=FALSE}
+library(ggplot2)
+library(dplyr)
+```
 
 ## Glyphs and Data
 
@@ -15,18 +20,54 @@ Heiro**glyph** | Mayan **glyph**
 
 ## Data Glyph
 
-A data glyph is also a mark, but one that encodes the value of variables.  
+### A data glyph is also a mark, e.g. 
 
-EXAMPLES HERE error bars, dots, bars.
+![](Images/geom_rect.png) ![](Images/geom_segment.png) ![](Images/geom_text.png) ![](Images/geom_crossbar.png) ![](Images/geom_path.png) ![](Images/geom_line.png) ![](Images/geom_pointrange.png) ![](Images/geom_ribbon.png) ![](Images/geom_point.png) ![](Images/geom_polygon.png) ![](Images/geom_histogram.png) ![](Images/geom_dotplot.png) ![](Images/geom_freqpoly.png) ![](Images/geom_density.png) ![](Images/geom_violin.png) 
+
+The features of a data glyph encodes the value of variables. 
+
+* Some are very simple, e.g. a dot: ![](Images/geom_point.png)
+* Some combine different elements, e.g. a pointrange: ![](Images/geom_pointrange.png)
+* Some are complicated, e.g. a dotplot: ![](Images/geom_dotplot.png)
+
+See: *<http://docs.ggplot2.org/current/>*
 
 ## Data Glyph Properties: Aesthetics
 
-Definition of aethetic in the original sense
+e.g. Point glyph: x, y, shape, color, size, transparency
 
-dots: x, y, color, size, shape, ...
-bars: x, ybottom, ytop, color, ...
-error bars: x, ycenter, ytop, ybottom, ...
-Give some examples of aesthetics for one of the glyphs exemplified above.
+```{r echo=FALSE, fig.keep='all', out.width="50%"}
+set.seed(101)
+n <- 30
+Tmp <- data.frame(
+  sbp =  round(runif(n, min=80, max=180)),
+  dbp = round(runif(n, min=40, max=110)),
+  group = sample(c("Tr","Ctl"), size=n, replace=TRUE),
+  react = sample( c("Low", "Sev", "Mod"), size=n, replace=TRUE)
+)
+Tmp <- Tmp %>% mutate(dbp = pmin(sbp, dbp))
+p <- ggplot(Tmp, aes(x = sbp, y = dbp)) + xlab("Systolic BP") + ylab("Diastolic BP")
+p + geom_point(aes(color = group, size=react)) 
+p + geom_point(size=5, aes(shape=group, color=react))
+```
+
+## Why "Aesthetic"?
+
+![](Images/aesthetic1.png)![](Images/aesthetic2.png)
+
+## Some Graphics Components
+
+**frame**
+: The relationship between position and the data being plotted.
+
+**glyph**
+: The basic graphical "unit" that represents one case.  Other terms used include "mark" and "symbol." Variables set graphical attributes of the shape: size, color, shape, and so on. The location of the glyph --- location is an important graphical attribute! --- is set by the two variables defining the frame.
+
+**scale**
+: The relationship between the value of a variable and the graphical attribute to be displayed for that value
+
+**guide**
+: An indication for the human viewer of the scale, that is, graphics how a variable encodes into its graphical attribute.  Common guides are x- and y-axis tick marks and color keys.
 
 ## Glyph-Ready Data
 
@@ -35,54 +76,57 @@ Glyph-ready data has this form:
 * There is one row for each data glyph to be drawn. 
 * The variables are those that make up the features of the glyph.
 
-### The Goal of Data Wrangling
+<div class="columns-2">
+```{r echo=FALSE}
+head(Tmp)
+```
+
+```{r echo=FALSE}
+Tmp2 <- Tmp %>%
+  rename(x=sbp, y=dbp, color=react, shape=group )
+head(Tmp2)
+```
+</div>
+
+It's as if the variables were given the name of the aesthetic.
+
+## The Goal of Data Wrangling
 
 * Get your data into glyph-ready form.
 * "Glyph-ready" is also model-ready, descriptive-stats ready, and so on.
 
-## Graphics syntax in base graphics, lattice, ...
+## The Frame
+
+Include faceting
+
+## Layers
+
+Made with `geom_XXXX()`
+
+## Graphics syntax 
+
+### Lattice
 
 ```r
-xyplot(y ~ x, data=your_data_table)
+xyplot(y ~ x, data = your_data_table)
+histogram( ~ x, data = your_data_table)
+```
+That is:
 
-## The rest.
+**Graphic Form** `(` variables `, data = your_data_table)`
 
-* Data tables have rows and columns: cases and variables
-* Glyph-ready data 
+### ggplot2
 
-1. Some grammar [DTK, 15 min]
-    * Frame
-    * Glyph
-    * Aesthetic (graphical property)
-    * Glyph-ready data
-#. Map variables to aesthetics with `mScatter()`,  `mDistribution()`, `mBar()` (`mWorldMap()`)  [note: lattice graphics with `mPlot()`]
+```r
+ggplot(data = your_data_table) + geom_point(aes(x=x, y=y))
+ggplot(data = your_data_table) + geom_histogram(aes(x=x))
+```
+
+## Start out with a GUI
+
+Map variables to aesthetics with `mScatter()`,  `mDistribution()`, `mBar()` (`mWorldMap()`)  [note: lattice graphics with `mPlot()`]
     ```{r eval=FALSE}
 require(DCF)
 require(DCFinteractive)
 DCFinteractive::mScatter( your_data_frame )   
-
-
-## R Markdown
-
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
-
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## Slide with R Code and Output
-
-```{r}
-summary(cars)
 ```
-
-## Slide with Plot
-
-```{r, echo=FALSE}
-plot(cars)
-```
-

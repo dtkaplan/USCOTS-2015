@@ -1,5 +1,5 @@
 ---
-title: "Data Science Basics with R and RStudio"
+title: "Basics of Data Science with R and RStudio"
 author: "Nicholas Hortan & Daniel Kaplan"
 date: "USCOTS 2015.  May 27-28"
 output:
