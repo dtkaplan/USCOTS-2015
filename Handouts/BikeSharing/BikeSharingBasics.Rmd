@@ -1,0 +1,161 @@
+---
+title: "Bike Sharing Basics"
+author: "Data Computing"
+date: "USCOTS 2015"
+output: html_document
+---
+
+```{r include=FALSE}
+library(DCF)
+library(ggplot2)
+library(mosaic)
+your_turn <- function(...) {
+  "Your statement should replace 'your_turn()' in this chunk."
+}
+.... <- function(...) {
+  data.frame(station = c("M-Street", "M-Street"), 
+             weekend = c(FALSE, TRUE), 
+             daily_volume = c(750, 908))
+}
+```
+
+Capital BikeShare is a bicycle-sharing system in Washington, D.C.  At any of about 400 stations, a registered user can unlock and check out a bicycle.  After use, the bike can be returned to the same station or any of the other stations.
+
+Such sharing systems require careful management.  There need to be enough bikes at each station to satisfy the demand, and enough empty docks at the destination station so that the bikes can be returned.  At each station, bikes are checked out and are returned over the course of the day.  An imbalance between bikes checked out and bikes returned calls for the system administration to truck bikes from one station to another.  This is expensive.
+
+In order to manage the system, and to support a smart-phone app so that users can find out when bikes are available, Capital BikeShare collects real-time data on when and where each bike is checked out or returned, how many bikes and empty docks there are at each station. Capital BikeShare publishes the station-level information in real time.  The organization also publishes, at the end of each quarter of the year, the historical record of each bike rental in that time.
+
+You can access the data from the Capital Bikeshare web site. Doing this requires some translation and cleaning, but that's not the concern here. For the present activity, translated and cleaned data are provided in the form of two data tables on the *Data Computing* site: 
+
+* `Stations` giving information about location of each of the stations in the system.
+    ```{r cache=TRUE}
+    Stations <- mosaic::read.file("http://tiny.cc/dcf/DC-Stations.csv")
+    ```
+
+* `Trips` giving the rental history over the last quarter of 2014.
+    ```{r cache=TRUE}
+    data_site <- "http://tiny.cc/dcf/2014-Q4-Trips-History-Data-Small.rds"
+    Trips <- readRDS(gzcon(url(data_site)))
+    ```
+    The `Trips` data table is a random subset of 10,000 trips from the full quarterly data.  Start with this small data table to develop your analysis commands.  When you have this working well, you can access the full data set of more than 600,000 events by removing `-Small` from the name of the `data_site`.
+    
+## Your Task
+
+### One: Compile this document as is
+
+That way you will know you are starting with a working document.  Note that the document is already set up to read in the data, so you will not have to do this again.  (For the professionals: the data reading statements have been cached, so it will not take much time to read the data *after* the first time you compile the document.)
+
+### Two: Data Wrangling
+
+Construct data wrangling statements to answer each of the following questions.  Edit this `.Rmd` document to include your solution and the results you find.
+
+#### **1.** Which station has the most outgoing rentals?
+
+```{r}
+Trips %>%
+  your_turn()
+```
+
+Hints: (You can delete this part whenever you like.)
+
+* Some questions you might ask:
+    * Do you need to eliminate any of the cases? If so, `filter()`.
+    * Do you need to aggregate cases? If so, `summarise()`.
+        * What will be the reduction operation? E.g. `mean()`, `sum()`, `n()`, ...
+    * Do you need to divide the data table into groups?  If so, `group_by()`.
+* Use `names()` to remind yourself of the names of the variables.
+    ```{r}
+Trips %>% names()
+```
+* For each rental event, the starting station is `sstation`. The ending station is `estation`.
+* Each case in `Trips` is one rental event.
+* The reduction function meaning "how many cases here?" is `n()`.  This can only be used in arguments to data verbs. `n()` takes no arguments --- the number of cases is the same for each and every variable.
+* The data verbs `arrange()` and `head()` may be useful, as is the transformation verb `desc()`.
+
+#### **2.** Which station has the most outgoing rentals on Saturday?
+
+```{r}
+Trips %>% 
+  your_turn()
+```
+
+Hints:
+
+* Again, some questions you might ask:
+    * Do you need to eliminate any of the cases? If so, `filter()`.
+    * Do you need to aggregate cases? If so, `summarise()`.
+        * What will be the reduction operation? E.g. `mean()`, `sum()`, `n()`, ...
+    * Do you need to divide the data table into groups?  If so, `group_by()`.
+
+* You can extract the day-of-week information from the `sdate` variable.  The transformation function `lubridate::wday()` is very helpful here; you'll call it with `sdate` as the argument.
+    * You may have to install the `lubridate` package from CRAN.  Figuring out when a package needs to be installed is an important, but simple, skill. 
+    * Want to know more about `wday()`?  Try `help(wday, package="lubridate"))`.
+
+#### **3.** Which origin/destination pair of stations has the most traffic?
+
+```{r}
+Trips %>% 
+  your_turn()
+```
+
+Hints:
+
+* `group_by()` can work with more than one variable at the same time.
+* The data verbs `arrange()` and `head()` may be useful, as is the transformation verb `desc()`.
+* Fancier way of finding the maximum case: Suppose you've put the amount of traffic into a variable `traffic` in your `summarise()` statement.  Use the data-wrangling step `filter(row_number(desc(traffic)) == 1)`. You can use `help()` to figure out what each of these functions from the `dplyr` package does and how they fit together to produce the result.
+
+#### **4.** Is mean daily outbound rental volume different on weekdays and weekends taking all stations together in aggregate. 
+
+```{r}
+Trips %>% 
+  your_turn()
+```
+
+Hints:
+
+* When you want to aggregate over all levels of a variable (e.g. the station) do **not** put that variable in a `group_by()` statement.
+* Since you want to distinguish weekends from weekdays, it may be helpful to have a variable that contains this information.  The following data-wrangling step might be helpful --- make sure you understand what it is doing.
+    ```r
+mutate(weekend = lubridate::wday(sdate) %in% c(1,7)) 
+```
+* Needless to say, the `mean()` reduction function will be useful here. Keep in mind that you want separate means for weekdays and weekends.
+* If you have a grouping variable you want to use *after* a `summarise()`, you must include that variable in the `group_by()` statement. *You probably won't appreciate this hint until you've made the mistake.*
+    
+#### **5.** (Optional) Same as (4), but give a separate answer for each station.
+
+```{r}
+Trips %>% 
+  your_turn()
+```
+
+For question (4), your answer might be in the form of a table like this:
+
+`weekend` | `daily_volume`
+----------|--------------
+`FALSE`   | some number, e.g. `7509`
+`TRUE`    | another number, e.g. `9408`
+
+It's easy enough by eye to extract the answer out of a table like this.  For these made-up numbers, 9408 is greater than 7509, so mean daily weekend volume is larger than weekday volume.
+
+But, when you are doing this operation for each of the stations, this gets unwieldy.  Instead, you will want a form like this:
+
+```{r echo=FALSE}
+....()
+```
+
+This is called a "wide" format in comparison to the "narrow" format of the earlier table.  (See *Data Computing* Chapter 11.)  The conversion can be done with the `tidyr::spread()` function.) You can use it in a data-wrangling step like this:
+
+```{r}
+Trips %>%
+  .... %>% # previous wrangling statements
+  spread(key = weekend, value = daily_volume)
+```
+
+Once you have things in this
+
+Drill on Bike Sharing: Give out Rmarkdown scaffold [DTK] [20 min]
+
+* Which station has the most rentals?
+* Which station has the most rentals on Saturday?
+* Which pair of stations has the biggest traffic?
+* Are weekdays different from weekends?  For each station?

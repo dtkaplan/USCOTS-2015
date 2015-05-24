@@ -13,7 +13,7 @@ The workshop is "hands-on", so some advance work on your part will help to make 
     * install or update R (3.1.1 or later). Go to <http://cran.r-project.org/>.
     * install the Preview release of RStudio: <http://www.rstudio.com/products/rstudio/download/preview/>
 
-(3) Install some additional add-on R packages.  To do this, run the following commands by cutting-and-pasting the following into the RStudio console:
+(3) Install some additional add-on R packages. (If you are using the Windows operating system, see the note below before this step.) To do this, run the following commands by cutting-and-pasting the following into the RStudio console:
 ```{r eval=FALSE}
 update.packages() 
 install.packages(c("devtools", "mosaic", "tidyr", "dplyr", 
@@ -24,6 +24,8 @@ devtools::install_github("ProjectMOSAIC/mosaic", ref="beta")
 devtools::install_github("dtkaplan/DCF") 
 devtools::install_github("dtkaplan/DCFinteractive")
 ```
+
+(Note for Windows Users) Before step (3), install the `Rtools` software on your computer. This is not done through R.  Rather, there is a self-extracting installation file that you run in Windows itself.  See <http://cran.r-project.org/bin/windows/Rtools/>
 
 If you are able to set up the software on your laptop, that will reduce the load on the server and speed up responses for everyone. 
 

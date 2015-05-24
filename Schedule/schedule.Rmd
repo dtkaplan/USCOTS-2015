@@ -113,16 +113,20 @@ file.edit("USCOTS-01.Rmd")
 #. Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20 min]
 #. [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
-### Case study: Bike sharing
+### Mini case study: Bike sharing
 
-Drill on Bike Sharing: Give out Rmarkdown scaffold [DTK] [20 min]
+Simple to moderately complicated data wrangling tasks in the context of bike rentals in thw Washington, DC area. For quick browsing, here's the [HTML file](Handouts/BikeSharingBasics.html).  But work with the `.Rmd` as shown.
 
-* Which station has the most rentals?
-* Which station has the most rentals on Saturday?
-* Which pair of stations has the biggest traffic?
-* Are weekdays different from weekends?  For each station?
+1. Download and edit the `.Rmd` template file. Copy these commands. 
+```{r eval=FALSE}
+download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/BikeSharingBasics.Rmd", #"http://tiny.cc/dcf/BikeSharingBasics.Rmd",
+              dest="BikeSharingBasics.Rmd")
+file.edit("BikeSharingBasics.Rmd")
+```
+2. Make sure to compile the unchanged file to HTML.  It's best to start with a working document then add small changes, recompile, fix errors as required, add more small changes, recompile, and so on.
 
-### Case study: Airline flights database
+
+### Macro case study: Airline flights database
 
 activity: work in groups to do something with dplyr?  (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH]  (join) plus more practice  (20 minutes)
 

@@ -31,6 +31,8 @@ May 27-28, 2015 at Pennsylvania State University
     * The password is your account ID
     * The account expires on Sunday 31 May --- the end of USCOTS
 3. The first several chapters of the [*Data Computing* book](https://www.dropbox.com/s/ox1ebhgjwbqo6q5/DataComputingChapters.pdf?dl=0) as a PDF. You will need a password to open it: `branchtree`.  At the publisher's insistence, please **do not** copy or distribute the PDF or the password.
+4. The [pre-workshop skill survey](https://docs.google.com/forms/d/1zQBF_3PIs7OHLn9srhr5odgqL0p9yxsi8OjnmqRk43k/viewform)
+
 
 ### Contact Information
 

@@ -931,8 +931,12 @@ devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
 <h3>Visualization Quick Start</h3>
 <ul>
 <li><a href="DataScienceWorkshop/VisualizationQuickStart.html">Glyphs and Glyph-ready Data</a></li>
-<li>Activity: Deconstructing graphics. Pick any one: <a href="../Handouts/DeconstructingGraphics/G1.pdf">one</a>, <a href="../Handouts/DeconstructingGraphics/G2.pdf">two</a>, <a href="../Handouts/DeconstructingGraphics/G3.pdf">three</a>, <a href="../Handouts/DeconstructingGraphics/G4.pdf">four</a>, <a href="../Handouts/DeconstructingGraphics/G5.pdf">five</a>, <a href="../Handouts/DeconstructingGraphics/G6.pdf">six</a>, <a href="../Handouts/DeconstructingGraphics/G7.pdf">seven</a>, <a href="../Handouts/DeconstructingGraphics/G8.pdf">eight</a>, <a href="../Handouts/DeconstructingGraphics/G9.pdf">nine</a>, <a href="../Handouts/DeconstructingGraphics/G10.pdf">ten</a>, <a href="../Handouts/DeconstructingGraphics/G11.pdf">eleven</a>, <a href="../Handouts/DeconstructingGraphics/G11.pdf">twelve</a>, <a href="../Handouts/DeconstructingGraphics/G13.pdf">thirteen</a>,</li>
-<li>Using <code>mScatter()</code> [Include Exercises.Rmd: GraphicsQuickStart/One]</li>
+<li>Activity: Deconstructing graphics. Pick any one: <a href="../Handouts/DeconstructingGraphics/G1.pdf">one</a>, <a href="../Handouts/DeconstructingGraphics/G2.pdf">two</a>, <a href="../Handouts/DeconstructingGraphics/G3.pdf">three</a>, <a href="../Handouts/DeconstructingGraphics/G4.pdf">four</a>, <a href="../Handouts/DeconstructingGraphics/G5.pdf">five</a>, <a href="../Handouts/DeconstructingGraphics/G6.pdf">six</a>, <a href="../Handouts/DeconstructingGraphics/G7.pdf">seven</a>, <a href="../Handouts/DeconstructingGraphics/G8.pdf">eight</a>, <a href="../Handouts/DeconstructingGraphics/G9.pdf">nine</a>, <a href="../Handouts/DeconstructingGraphics/G10.pdf">ten</a>, <a href="../Handouts/DeconstructingGraphics/G11.pdf">eleven</a>, <a href="../Handouts/DeconstructingGraphics/G11.pdf">twelve</a>, <a href="../Handouts/DeconstructingGraphics/G13.pdf">thirteen</a> <!-- These are from DCF-2015/Book/Worksheets --></li>
+<li>Using <code>mScatter()</code> [PUT THE LINK TO SLIDES HERE. Include Exercises.Rmd: GraphicsQuickStart/One]
+<ol style="list-style-type: decimal">
+<li>Define the frame (faceting also is part of the frame)</li>
+<li>map variables to the aesthetics</li>
+</ol></li>
 <li>Activity: Visualizing a data frame: Use <code>NHANES</code> from the exercise. [Note to DTK: need more scaffolding here (list of interesting datasets, how to see the codebooks, etc.)] ```</li>
 </ul>
 <h3>R Markdown Quick Start</h3>
@@ -979,15 +983,21 @@ file.edit("USCOTS-01.Rmd")</code></pre>
 <li>Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20 min]</li>
 <li><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Data Wrangling Cheat Sheet</a></li>
 </ol>
-<h3>Case study: Bike sharing</h3>
-<p>Drill on Bike Sharing: Give out Rmarkdown scaffold [DTK] [20 min]</p>
-<ul>
-<li>Which station has the most rentals?</li>
-<li>Which station has the most rentals on Saturday?</li>
-<li>Which pair of stations has the biggest traffic?</li>
-<li>Are weekdays different from weekends? For each station?</li>
-</ul>
-<h3>Case study: Airline flights database</h3>
+<h3>Mini case study: Bike sharing</h3>
+<p>Simple to moderately complicated data wrangling tasks in the context of bike rentals in thw Washington, DC area. For quick browsing, here's the <a href="Handouts/BikeSharingBasics.html">HTML file</a>. But work with the <code>.Rmd</code> as shown.</p>
+<ol style="list-style-type: decimal">
+<li>Download and edit the <code>.Rmd</code> template file. Copy these commands.
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/BikeSharingBasics.Rmd", #"http://tiny.cc/dcf/BikeSharingBasics.Rmd",
+          dest="BikeSharingBasics.Rmd")
+file.edit("BikeSharingBasics.Rmd")</code></pre>
+</div></li>
+<li>Make sure to compile the unchanged file to HTML. It's best to start with a working document then add small changes, recompile, fix errors as required, add more small changes, recompile, and so on.</li>
+</ol>
+<h3>Macro case study: Airline flights database</h3>
 <p>activity: work in groups to do something with dplyr? (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH] (join) plus more practice (20 minutes)</p>
 <h3>Data Scraping Quick Start</h3>
 <ul>

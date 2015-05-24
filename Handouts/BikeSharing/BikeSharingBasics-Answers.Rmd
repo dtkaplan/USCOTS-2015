@@ -1,0 +1,79 @@
+---
+title: "Bike Sharing Basics"
+author: "Data Computing"
+date: "USCOTS 2015"
+output: html_document
+---
+
+```{r include=FALSE}
+library(DCF)
+library(ggplot2)
+library(mosaic)
+```
+
+
+```{r cache=TRUE}
+Stations <- mosaic::read.file("http://tiny.cc/dcf/DC-Stations.csv")
+data_site <- "http://tiny.cc/dcf/2014-Q4-Trips-History-Data-Small.rds"
+Trips <- readRDS(gzcon(url(data_site)))
+```
+
+
+#### **1.** Which station has the most outgoing rentals?
+
+```{r}
+Trips %>%
+  group_by(sstation) %>%
+  summarise(rental_volume = n()) %>%
+  arrange(desc(rental_volume)) %>%
+  head(1)
+```
+
+#### **2.** Which station has the most outgoing rentals on Saturday?
+
+```{r}
+Trips %>% 
+  mutate(day_of_week = lubridate::wday(sdate)) %>%
+  filter(day_of_week == 7) %>%
+  group_by(sstation) %>%
+  summarise(rental_volume = n()) %>%
+  arrange(desc(rental_volume)) %>%
+  head(1)
+```
+
+#### **3.** Which origin/destination pair of stations has the most traffic?
+
+```{r}
+Trips %>%
+  group_by(sstation, estation) %>%
+  summarise(rental_volume = n()) %>%
+  arrange(desc(rental_volume)) %>%
+  head(1)
+```
+
+#### **4.** Is mean daily outbound rental volume different on weekdays and weekends taking all stations together in aggregate. 
+
+```{r}
+Trips %>% 
+  mutate(day_of_week = lubridate::wday(sdate),
+         weekend = day_of_week %in% c(1,7)) %>%
+  group_by(weekend, day_of_week) %>%
+  summarise(rental_volume = n()) %>%
+  summarise(daily_mean = mean(rental_volume, na.rm=TRUE)) 
+```
+
+    
+#### **5.** (Optional) Same as (4), but give a separate answer for each station.
+
+```{r}
+Trips %>% 
+  mutate(day_of_week = lubridate::wday(sdate),
+         weekend = day_of_week %in% c(1,7)) %>%
+  group_by(sstation, weekend, day_of_week) %>%
+  summarise(rental_volume = n()) %>%
+  summarise(daily_volume = mean(rental_volume, na.rm=TRUE)) %>%
+  spread(key = weekend, value = daily_volume) %>%
+  head() # just to avoid printing all the results here.
+```
+
+A subtlety: Note that each `summarise()` statement *removes* one of the grouping variables.  The others survive.  You can see what groups are present at any point with the `groups()` statement.
