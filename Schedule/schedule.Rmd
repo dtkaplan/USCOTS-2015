@@ -32,7 +32,7 @@ Come a bit before the official 8:30 am start to get help with these.
 * Making sure you have access to the software.
     * [**R 3.1.1** or more recent](http://cran.rstudio.com/) as well as [**RStudio** preview edition](http://www.rstudio.com/products/rstudio/download/preview/)    
     or, alternatively,
-    * use a web browser to access the RStudio **server** being provided for this workshop at <macalester.edu/rstudio>.  You will need login credentials which will be provided at the start of the workshop. (N.B., this server will be available only for the duration of USCOTS 2015.  We will show you how to preserve your files for later use on another system.)
+    * use a web browser to access the RStudio **server** being provided for this workshop at <http://macalester.edu/rstudio>.  You will need login credentials which will be provided at the start of the workshop. (N.B., this server will be available only for the duration of USCOTS 2015.  We will show you how to preserve your files for later use on another system.)
     
     
     Whichever way you access R and RStudio, please
@@ -78,8 +78,10 @@ devtools::install_github("dtkaplan/DCFinteractive")
     * Glyph
     * Aesthetic (graphical property)
     * Glyph-ready data
-#. Map variables to aesthetics with `mScatter()`, `mBar()`, `mDistribution()`, `mWorldMap()` [Note to DTK: why not use mplot here?]
+#. Map variables to aesthetics with `mScatter()`,  `mDistribution()`, `mBar()` (`mWorldMap()`)  [note: lattice graphics with `mPlot()`]
     ```{r eval=FALSE}
+require(DCF)
+require(DCFinteractive)
 DCFinteractive::mScatter( your_data_frame )   
 ```
 #. Activity: Visualizing a data frame [DTK, 10 min]
@@ -133,7 +135,7 @@ activity: work in groups to do something with dplyr?  (provide scaffolding with 
 ### Data Scraping Quick Start
 
 * simple data scraping: reading HTML tables (nuclear reactors) [DTK] Activity??   (20 minutes)
-* Other sources of data. Something easy they can do: NYC open data, CDC.  At the level of downloading CSV files. [DTK to find example from Data Computing book.]  Bike sharing? Restaurants?  Scaffold 70% for them and have them do one. [30 min work, 10 min presentation]
+* Other sources of data. Something easy they can do: NYC open data, CDC.  At the level of downloading CSV files. [DTK to find example from Data Computing book.]  Bike sharing? Restaurants?  Scaffold 70% for them and have them do one. Difference between source API and what you write in R. [30 min work, 10 min presentation]
 
 ### Shiny and dynamic graphics
 
