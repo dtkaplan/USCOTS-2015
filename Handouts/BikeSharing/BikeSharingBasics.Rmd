@@ -39,15 +39,12 @@ You can access the data from the Capital Bikeshare web site. Doing this requires
     ```
     The `Trips` data table is a random subset of 10,000 trips from the full quarterly data.  Start with this small data table to develop your analysis commands.  When you have this working well, you can access the full data set of more than 600,000 events by removing `-Small` from the name of the `data_site`.
     
-## Your Task
+## Your Tasks
 
-### One: Compile this document as is
 
-That way you will know you are starting with a working document.  Note that the document is already set up to read in the data, so you will not have to do this again.  (For the professionals: the data reading statements have been cached, so it will not take much time to read the data *after* the first time you compile the document.)
+Construct data wrangling statements to answer each of the following questions.  Edit this `.Rmd` document to include your solution and the results you find.  
 
-### Two: Data Wrangling
-
-Construct data wrangling statements to answer each of the following questions.  Edit this `.Rmd` document to include your solution and the results you find.
+Note that the document is already set up to read in the data, so you will not have to do this again.  (For the technorati: the data reading statements have been cached, so it will not take much time to read the data *after* the first time you compile the document.)
 
 #### **1.** Which station has the most outgoing rentals?
 

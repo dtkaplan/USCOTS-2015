@@ -947,8 +947,9 @@ devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">download.file("http://tiny.cc/dcf/USCOTS-01.Rmd",
-      dest="USCOTS-01.Rmd")
+<pre style=""><code class="source r">download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-01.Rmd",
+  dest="USCOTS-01.Rmd")
 file.edit("USCOTS-01.Rmd")</code></pre>
 </div></li>
 <li>Compile it to HTML.</li>
@@ -986,13 +987,14 @@ file.edit("USCOTS-01.Rmd")</code></pre>
 <h3>Mini case study: Bike sharing</h3>
 <p>Simple to moderately complicated data wrangling tasks in the context of bike rentals in thw Washington, DC area. For quick browsing, here's the <a href="Handouts/BikeSharingBasics.html">HTML file</a>. But work with the <code>.Rmd</code> as shown.</p>
 <ol style="list-style-type: decimal">
-<li>Download and edit the <code>.Rmd</code> template file. Copy these commands.
+<li>Download and edit the <code>.Rmd</code> template file. Copy and paste these commands into your R console.
 <div class="row">
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/BikeSharingBasics.Rmd", #"http://tiny.cc/dcf/BikeSharingBasics.Rmd",
-          dest="BikeSharingBasics.Rmd")
+<pre style=""><code class="source r">download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/BikeSharingBasics.Rmd", 
+  dest="BikeSharingBasics.Rmd")
 file.edit("BikeSharingBasics.Rmd")</code></pre>
 </div></li>
 <li>Make sure to compile the unchanged file to HTML. It's best to start with a working document then add small changes, recompile, fix errors as required, add more small changes, recompile, and so on.</li>
@@ -1012,7 +1014,7 @@ file.edit("BikeSharingBasics.Rmd")</code></pre>
 <button class="source R toggle btn btn-xs btn-primary">
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
-<pre style=""><code class="source r">download.file("http://tiny.cc/dcf/USCOTS-Shiny.Rmd",
+<pre style=""><code class="source r">download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-Shiny.Rmd",
       dest="USCOTS-Shiny.Rmd")
 file.edit("USCOTS-Shiny.Rmd")</code></pre>
 </div></li>

@@ -85,8 +85,9 @@ devtools::install_github("dtkaplan/DCFinteractive")
 1. Quick intro to R Markdown and reproducible analysis [Prezi](https://prezi.com/e7wtfnacj9ub/intro-to-r-markdown/) [NJH, 10 min]
 2. Activity (visualization redux): Give these commands to open our template file in the editor.
     ```{r eval=FALSE}
-download.file("http://tiny.cc/dcf/USCOTS-01.Rmd",
-              dest="USCOTS-01.Rmd")
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-01.Rmd",
+  dest="USCOTS-01.Rmd")
 file.edit("USCOTS-01.Rmd")
 ```
 3. Compile it to HTML.
@@ -117,10 +118,11 @@ file.edit("USCOTS-01.Rmd")
 
 Simple to moderately complicated data wrangling tasks in the context of bike rentals in thw Washington, DC area. For quick browsing, here's the [HTML file](Handouts/BikeSharingBasics.html).  But work with the `.Rmd` as shown.
 
-1. Download and edit the `.Rmd` template file. Copy these commands. 
+1. Download and edit the `.Rmd` template file. Copy and paste these commands into your R console. 
 ```{r eval=FALSE}
-download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/BikeSharingBasics.Rmd", #"http://tiny.cc/dcf/BikeSharingBasics.Rmd",
-              dest="BikeSharingBasics.Rmd")
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/BikeSharingBasics.Rmd", 
+  dest="BikeSharingBasics.Rmd")
 file.edit("BikeSharingBasics.Rmd")
 ```
 2. Make sure to compile the unchanged file to HTML.  It's best to start with a working document then add small changes, recompile, fix errors as required, add more small changes, recompile, and so on.
@@ -140,7 +142,7 @@ activity: work in groups to do something with dplyr?  (provide scaffolding with 
 * brief introduction to Shiny via Markdown [NJH] (10 minutes)
 * Activity: customize a default shiny file.  [DTK, 30 min]
     ```{r eval=FALSE}
-download.file("http://tiny.cc/dcf/USCOTS-Shiny.Rmd",
+download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-Shiny.Rmd",
               dest="USCOTS-Shiny.Rmd")
 file.edit("USCOTS-Shiny.Rmd")
 ```
