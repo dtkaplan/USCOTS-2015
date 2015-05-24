@@ -1,0 +1,66 @@
+---
+title: "USCOTS data science workshop: intro to text mining"
+author: "Anonymous until you change this!"
+date: ""
+output: 
+  html_document:
+    fig_height: 3
+    fig_width: 5
+  pdf_document:
+    fig_height: 3
+    fig_width: 5
+  word_document:
+    fig_height: 3
+    fig_width: 5
+---
+
+
+```{r include=FALSE}
+# Don't delete this chunk if you are using the mosaic package
+# This loads the mosaic and dplyr packages
+require(mosaic)
+require(DCF)
+```
+
+```{r include=FALSE}
+# Some customization.  You can alter or delete as desired (if you know what you are doing).
+
+# This changes the default colors in lattice plots.
+trellis.par.set(theme=theme.mosaic())  
+
+# knitr settings to control how R chunks work.
+require(knitr)
+opts_chunk$set(
+  tidy=FALSE,     # display code as typed
+  size="small"    # slightly smaller font for code
+)
+# This loads the mosaic data sets.  (Could be deleted if you are not using them.)
+require(mosaicData)                
+```
+
+### Introduction
+
+The `aRxiv` package facilitates access to http://arXiv.org, a repository
+of electronic preprints for a number of scientific disciplines.  It receives
+many thousands of new submissions each month.  In this markdown file, we will explore some 
+analyses of the text in some of these abstracts.
+
+To avoid overloading the arXiv server, we will use data that have been previously downloaded using the following commands:
+```{r eval=FALSE}
+require(aRxiv)
+efron <- arxiv_search(query='cat:stat*', limit=1000)
+names(efron)
+dim(efron)
+efron <- mutate(efron, submityear =
+  year(sapply(str_split(submitted, " "), "[[", 1)))
+with(efron, table(submityear))
+```
+
+
+
+
+
+
+This file can be knit to HTML, PDF, or Word.  In RStudio, just select the desired output file type
+and click on `Knit HTML`, `Knit PDF`, or `Knit Word`.  Use the dropdown menu next to that to 
+change the desired file type.
