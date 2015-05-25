@@ -116,12 +116,12 @@ file.edit("USCOTS-01.Rmd")
 
 ### Mini case study: Bike sharing
 
-Simple to moderately complicated data wrangling tasks in the context of bike rentals in thw Washington, DC area. For quick browsing, here's the [HTML file](Handouts/BikeSharingBasics.html).  But work with the `.Rmd` as shown.
+Simple to moderately complicated data wrangling tasks in the context of bike rentals in thw Washington, DC area. For quick browsing, here's the [HTML file](Handouts/BikeSharing/BikeSharingBasics.html).  But work with the `.Rmd` as shown.
 
 1. Download and edit the `.Rmd` template file. Copy and paste these commands into your R console. 
 ```{r eval=FALSE}
 download.file(
-  "http://dtkaplan.github.io/USCOTS-2015/Handouts/BikeSharingBasics.Rmd", 
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/BikeSharing/BikeSharingBasics.Rmd", 
   dest="BikeSharingBasics.Rmd")
 file.edit("BikeSharingBasics.Rmd")
 ```
@@ -131,6 +131,8 @@ file.edit("BikeSharingBasics.Rmd")
 ### Macro case study: Airline flights database
 
 activity: work in groups to do something with dplyr?  (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH]  (join) plus more practice  (20 minutes)
+
+Optional: Join activity: How does the traffic depend on the distance between stations?  On how far the station is from downtown?
 
 ### Data Scraping Quick Start
 
