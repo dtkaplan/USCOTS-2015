@@ -920,7 +920,7 @@ devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
 <ul>
 <li>Quick introduction to RStudio [NJH, 5 min]</li>
 </ul>
-<p>[OUTLINE TO BE MADE BY NICK, THEN DELETE THIS BULLET POINTS]</p>
+<p>[OUTLINE TO BE MADE BY NICK, THEN DELETE THESE BULLET POINTS]</p>
 <ul>
 <li>panes, tabs, console, editor?,</li>
 <li>Lead through opening a project. open a project</li>
@@ -969,19 +969,17 @@ file.edit("USCOTS-01.Rmd")</code></pre>
 <li>piping</li>
 </ul></li>
 <li>Wrangling data verbs vs reduction verbs vs transformation verbs. [DTK, 10 min] THESE WILL BE A FEW SLIDES. REFER TO THE CHEAT SHEET.</li>
-<li>Activity: What happened to Mary and Jane? [DTK, 15 min] THIS WILL BE USCOTS-02.Rmd
-<ul>
-<li><code>filter()</code>, piping, <code>select()</code>, <code>arrange()</code></li>
-<li>filter by name, by sex, by year range.</li>
-<li><code>group_by()</code> and <code>summarise()</code>
-<ul>
-<li>Add up selected names over the years.</li>
-<li>How many babies in each year?</li>
-<li>How many distinct names in each year?</li>
-<li>Entropy?</li>
-</ul></li>
-</ul></li>
-<li>Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20 min]</li>
+<li>Activity: <a href="Handouts/WhatHappenedToJane/AppliedProbabilityProject.html">What happened to Mary and Jane?</a> Download and edit the template:
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/WhatHappenedToJane/WhatHappenedToJane.Rmd",
+  dest="WhatHappenedToJane.Rmd")
+file.edit("WhatHappenedToJane.Rmd")</code></pre>
+</div>
+The answers are <a href="Handouts/WhatHappenedToJane/WhatHappenedToJane-answers.html">here</a></li>
 <li><a href="http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Data Wrangling Cheat Sheet</a></li>
 </ol>
 <h3>Mini case study: Bike sharing</h3>
@@ -1020,11 +1018,15 @@ file.edit("BikeSharingBasics.Rmd")</code></pre>
 file.edit("USCOTS-Shiny.Rmd")</code></pre>
 </div></li>
 </ul>
-<h3>Maps: For self study</h3>
+<h3>On your own</h3>
+<ol style="list-style-type: decimal">
+<li>Maps
 <ul>
 <li>Make a choropleth map. <code>mWorldMap()</code>, <code>mUSMap()</code> [DTK] From Data Computing example</li>
 <li>Leaflet bicycle map</li>
-</ul>
+</ul></li>
+<li>An <a href="Handouts/WhatHappenedToJane/AppliedProbabilityProject.html">idea for an applied probability project</a>.</li>
+</ol>
 <h3>Models and Machine Learning: for self study</h3>
 <p>Link to Danny's notes WILL GO HERE [DTK]</p>
 <ul>

@@ -1,0 +1,8 @@
+---
+title: "How many births?"
+author: "Data Computing"
+date: "USCOTS 2015"
+output: html_document
+---
+
+The Social Security baby data in `DCF::BabyNames` doesn't include names given to fewer than five babies of each sex.  Is the list missing a lot of babies?  Using the data, construct an estimate of the total number of babies in the Social Security records born after 1960. (Comprehensive registration of babies for Social Security didn't occur until the 1950s. The `babynames` package provides additional information.)

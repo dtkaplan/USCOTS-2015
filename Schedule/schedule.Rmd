@@ -62,7 +62,7 @@ devtools::install_github("dtkaplan/DCFinteractive")
 
 * Quick introduction to RStudio [NJH, 5 min]
 
-[OUTLINE TO BE MADE BY NICK, THEN DELETE THIS BULLET POINTS]
+[OUTLINE TO BE MADE BY NICK, THEN DELETE THESE BULLET POINTS]
 
 * panes, tabs, console, editor?, 
 * Lead through opening a project.  open a project
@@ -103,15 +103,14 @@ file.edit("USCOTS-01.Rmd")
     * functions and arguments
     * piping
 #. Wrangling data verbs vs reduction verbs vs transformation verbs. [DTK, 10 min] THESE WILL BE A FEW SLIDES.  REFER TO THE CHEAT SHEET.
-#. Activity: What happened to Mary and Jane? [DTK, 15 min] THIS WILL BE USCOTS-02.Rmd
-    * `filter()`, piping, `select()`, `arrange()`
-    * filter by name, by sex, by year range.
-    * `group_by()` and `summarise()`
-        * Add up selected names over the years.
-        * How many babies in each year?
-        * How many distinct names in each year?
-        * Entropy?
-#. Convert USCOTS-02.Rmd to be some names of interest to you. Publish to RPubs. [20 min]
+#. Activity: [What happened to Mary and Jane?](Handouts/WhatHappenedToJane/AppliedProbabilityProject.html) Download and edit the template:
+    ```{r eval=FALSE}
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/WhatHappenedToJane/WhatHappenedToJane.Rmd",
+  dest="WhatHappenedToJane.Rmd")
+file.edit("WhatHappenedToJane.Rmd")
+```
+    The answers are [here](Handouts/WhatHappenedToJane/WhatHappenedToJane-answers.html)
 #. [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 ### Mini case study: Bike sharing
@@ -149,10 +148,13 @@ download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-Shiny.Rmd",
 file.edit("USCOTS-Shiny.Rmd")
 ```
 
-### Maps: For self study
+### On your own
 
-* Make a choropleth map. `mWorldMap()`, `mUSMap()`  [DTK] From Data Computing example
-* Leaflet bicycle map
+1. Maps
+    * Make a choropleth map. `mWorldMap()`, `mUSMap()`  [DTK] From Data Computing example
+    * Leaflet bicycle map
+2. An [idea for an applied probability project](Handouts/WhatHappenedToJane/AppliedProbabilityProject.html).
+
 
 ### Models and Machine Learning: for self study
 
