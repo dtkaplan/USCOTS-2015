@@ -111,7 +111,7 @@ file.edit("WhatHappenedToJane.Rmd")
 
 ### Mini case study: Bike sharing
 
-Simple to moderately complicated data wrangling tasks in the context of bike rentals in thw Washington, DC area. For quick browsing, here's the [HTML file](Handouts/BikeSharing/BikeSharingBasics.html).  But work with the `.Rmd` as shown.
+Simple to moderately complicated data wrangling tasks in the context of bike rentals in thw Washington, DC area. For quick browsing, here's the [HTML file](../Handouts/BikeSharing/BikeSharingBasics.html).  But work with the `.Rmd` as shown.
 
 1. Download and edit the `.Rmd` template file. Copy and paste these commands into your R console. 
 ```{r eval=FALSE}
@@ -149,7 +149,7 @@ file.edit("USCOTS-Shiny.Rmd")
 1. Maps
     * Make a choropleth map. `mWorldMap()`, `mUSMap()`  [DTK] From Data Computing example
     * Leaflet bicycle map
-2. An [idea for an applied probability project](Handouts/WhatHappenedToJane/AppliedProbabilityProject.html).
+2. An [idea for an applied probability project](../Handouts/WhatHappenedToJane/AppliedProbabilityProject.html).
 
 
 ### Models and Machine Learning: for self study
