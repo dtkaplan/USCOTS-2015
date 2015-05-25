@@ -103,7 +103,7 @@ file.edit("USCOTS-01.Rmd")
     * functions and arguments
     * piping
 #. Wrangling data verbs vs reduction verbs vs transformation verbs. [DTK, 10 min] THESE WILL BE A FEW SLIDES.  REFER TO THE CHEAT SHEET.
-#. Activity: [What happened to Mary and Jane?](Handouts/WhatHappenedToJane/AppliedProbabilityProject.html) Download and edit the template:
+#. Activity: [What happened to Mary and Jane?](Handouts/WhatHappenedToJane/WhatHappenedToJane.html) Download and edit the template:
     ```{r eval=FALSE}
 download.file(
   "http://dtkaplan.github.io/USCOTS-2015/Handouts/WhatHappenedToJane/WhatHappenedToJane.Rmd",
