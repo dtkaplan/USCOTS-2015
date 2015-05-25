@@ -1,25 +1,18 @@
 ---
 title: 'STAT101: Better flight experiences with data (airline delays in New York City)'
 author: "Nicholas J. Horton"
-date: "May 19, 2015"
+date: "May 25, 2015"
 output:
-  pdf_document:
-    fig_height:
-    - 3
-    fig_width:
-    - 5
-    keep_tex:
-    - yes
   html_document:
-    fig_height:
-    - 3
-    fig_width:
-    - 5
+    fig_height: 3
+    fig_width: 5
+  pdf_document:
+    fig_height: 3
+    fig_width: 5
+    keep_tex: yes
   word_document:
-    fig_height:
-    - 3
-    fig_width:
-    - 5
+    fig_height: 3
+    fig_width: 5
 ---
 
 
@@ -183,11 +176,20 @@ xyplot(avgdelay ~ maxwind, groups=anyprecip, auto.key=TRUE, type=c("p", "smooth"
 
 After stratifying by precipitation status, we see that windspeed does not appear to be a major determinant of delays.
 
-## Closing thoughts and further resources
+## Your assignment
 
-Copies of the R Markdown and formatted files for these analyses (to allow replication of the analyses) along with further background on the Airline Delays dataset are available at http://www.amherst.edu/~nhorton/precursors.   
+Your mission: calculate the average delay by destination and airport for all flights in July, 2013 (hint, use `filter()`, `group_by()`, and `summarise()`).
 
-Wickham, H. (2011).  ASA 2009 Data Expo, *Journal of Computational and Graphical Statistics*, 20(2):281-283.
+```{r}
+# your commands go here
+```
+
+
+### Closing thoughts and further resources
+
+Horton NJ, Baumer BS, and Wickham H.  Setting the stage for data science: integration of data management skills in introductory and second courses in statistics, *CHANCE*, 28(2):40-50, http://chance.amstat.org/2015/04/setting-the-stage.
+
+Wickham H. (2011).  ASA 2009 Data Expo, *Journal of Computational and Graphical Statistics*, 20(2):281-283.
 
 #### Appendix
 
