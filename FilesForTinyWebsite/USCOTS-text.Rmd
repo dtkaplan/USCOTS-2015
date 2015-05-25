@@ -65,9 +65,8 @@ save(papers, file="arXivpapers2015-05.Rda")
 Download the dataframe with the papers
 ```{r}
 filename <- "arXivpapers2015-05.Rda"
-require(Curl)
 if (!file.exists(filename)) {
-  download.file("http://tiny.cc/dcf/arXivpapers2015-05.Rda", filename)
+  download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/arXivpapers2015-05.Rda", filename)
 }
 load(filename)
 ```
@@ -76,10 +75,17 @@ load(filename)
 names(papers)
 glimpse(papers)
 tally(~ submityear, data=papers)
-tally(~ categories, data=papers)
 ```
 
+```{r}
+# what has Brad Efron been up to?
+efron <- filter(papers, grepl("Efron", authors))
+efron
+```
+
+
 ```{r, message=FALSE}
+# let's use the text mining package to create a corpus
 require(tm)
 mycorpus <- VCorpus(DataframeSource(data.frame(papers$abstract)))
 head(strwrap(mycorpus[[1]]))
@@ -91,6 +97,7 @@ remove numbers and punctuation, map all of the text to lowercase, and
 elide common English words.
 
 ```{r}
+origcorpus <- mycorpus
 mycorpus <- tm_map(mycorpus, stripWhitespace)
 mycorpus <- tm_map(mycorpus, removeNumbers)
 mycorpus <- tm_map(mycorpus, removePunctuation)
@@ -98,6 +105,15 @@ mycorpus <- tm_map(mycorpus, content_transformer(tolower))
 mycorpus <- tm_map(mycorpus, removeWords, stopwords("english"))
 head(strwrap(mycorpus[[1]]))
 ```
+
+Let's generate a wordcloud...
+```{r warning=FALSE}
+require(wordcloud)
+wordcloud(mycorpus, colors=brewer.pal(6, "Dark2"), random.order=FALSE)
+```
+
+
+
 
 Finally, the `DocumentTermMatrix()` can be used to generate a document
 term matrix.  This is a sparse matrix that describes the frequency of terms
@@ -107,4 +123,24 @@ in a corpus.  We can display the terms which arise in 100 or more of the abstrac
 dtm <- DocumentTermMatrix(mycorpus)
 findFreqTerms(dtm, 100)
 ```
+
+```{r}
+# what words are associated with "markov"?
+findAssocs(dtm, "markov", 0.5)
+```
+
+```{r}
+# what words are associated with "regression"?
+findAssocs(dtm, "regression", 0.4)
+```
+
+
+```{r}
+origcorpus[[7]]
+```
+
+```{r}
+inspect(DocumentTermMatrix(mycorpus, list(dictionary=c("bayesian", "markov", "bootstrap"))))
+```
+
 
