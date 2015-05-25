@@ -99,6 +99,8 @@ file.edit("USCOTS-01.Rmd")
 ### Wrangling Quick Start
 
 1. [Notes](../DataScienceWorkshop/WranglingQuickStart.html)
+2. Practice with data verbs and `dplyr`: [An interactive app](http://rstudio.calvin.edu:3838/rpruim/dataOps/)
+    * Tasks: [NEED TO BE POSTED, DTK]
 #. Activity: [What happened to Mary and Jane?](../Handouts/WhatHappenedToJane/WhatHappenedToJane.html) Download and edit the template:
     ```{r eval=FALSE}
 download.file(
