@@ -64,7 +64,8 @@ library(mosaicData)
 make_my_plot <- reactive( 
   {
     vals <- data.frame(x = rnorm(1000))
-    ggplot(vals, aes(x = x)) + geom_histogram(binwidth = input$nbins)
+    ggplot(vals, aes(x = x)) + 
+      geom_histogram(binwidth = input$nbins)
   }
 )
 ```
@@ -83,4 +84,26 @@ but for the reactive form^[Why did [Joe Cheng](https://www.linkedin.com/in/jchen
 
 It's easy to be confused by this.
 
+# Build your own app!
 
+You can build it right here, leaving the example statements in place.  Just make sure to use unique names for any widgets and reactive functions that you create.
+
+## Some ideas:
+
+### Restaurant Inspections
+
+Data on restaurant inspections in New York City is provided by the `RestaurantsNYC` package.  If you haven't done so already, you will need to install the package:
+```{r eval=FALSE}
+devtools::install_github("dtkaplan/Data/RestaurantsNYC")
+```
+
+Write a new histogram display app like the one above but customize it for the scores given to restaurants on each inspection.  Display a histogram of scores arranged so that you can interactively change the bin size.  For small bins, a feature emerges that isn't evident when using just, say, 5 or 10 bins.
+
+Elaboration:
+
+* But in a slider to choose a time interval in days, with a default set to about 30 days.  Wrangle the inspection data so that you can compare density plots of the scores from inspections that happen within the selected interval after the previous inspection and those that come don't.
+
+### Baby Names
+
+Using the `BabyNames` data table, implement your own version of [this app](http://www.ssa.gov/oact/babynames/#ht=2) from the Social Security Administration.  Note: You will **not** need the "Go" or "Reset" buttons.
+ 

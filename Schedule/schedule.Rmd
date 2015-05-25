@@ -138,7 +138,6 @@ download.file(
 file.edit("USCOTS-flights.Rmd")
 ```
 
-
 ### Data Scraping Quick Start
 
 * simple data scraping: reading HTML tables (nuclear reactors) [DTK] Activity??   (20 minutes)
