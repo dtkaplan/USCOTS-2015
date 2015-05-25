@@ -52,7 +52,7 @@ opts_chunk$set(
 
 Statistics students (and instructors) need experience wrestling with large, messy, complex, challenging data sets, for which there is no obvious goal or specially-curated statistical method. In this example, we consider a case study from a subset of the 180 million record Airline Delays dataset (see http://stat-computing.org/dataexpo/2009 and http://www.amherst.edu/~nhorton/precursors) that includes n=336,776 domestic commercial flights originating in New York City area airports (Newark, JFK, and LaGuardia) in 2013.  These data are made available through Hadley Wickham's `nycflights13` package on CRAN, which includes five dataframes.  See the appendix for a list of the first few observations in each of these tables.
 
-```{r, echo=FALSE, eval=TRUE, message=FALSE}
+```{r, echo=TRUE, eval=TRUE, message=FALSE}
 require(mosaic); require(nycflights13)
 ```
 
@@ -64,13 +64,13 @@ Students can use this dataset to address questions that they find real and relev
 
 We start with an analysis focused on three destination airports in the San Francisco Bay area (OAK, SFO, and SJC).  
 
-```{r warning=FALSE, echo=FALSE}
+```{r warning=FALSE, echo=TRUE}
 filter(airports, faa %in% c('SFO', 'OAK', 'SJC'))   
 ```
 
 How many flights are there to each airport in January, 2013?
 
-```{r echo=FALSE}
+```{r echo=TRUE}
 airportcounts <- flights %>% 
    filter(dest %in% c('SFO', 'OAK', 'SJC')) %>%
    group_by(year, month, dest) %>%
@@ -80,7 +80,7 @@ filter(airportcounts, month==1)
 
 Almost all are to San Francisco international (SFO).  Let's take a closer look at what carriers service this route.
 
-```{r echo=FALSE, warning=FALSE}
+```{r echo=TRUE, warning=FALSE}
 airlines <- mutate(airlines, name=as.character(name), carrier=as.character(carrier))
 sfoflights <- inner_join(filter(flights, dest=="SFO"), airlines)
 tally(~ name, margin=TRUE, data=sfoflights)
@@ -92,7 +92,7 @@ United is the largest carrier (it accounts for more than half of the flights.
 
 #### Are there different delays by carrier?
 
-```{r echo=FALSE, warning=FALSE}
+```{r echo=TRUE, warning=FALSE}
 favstats(arr_delay ~ name, data=sfoflights)
 ```
 
@@ -100,7 +100,7 @@ The "average" results (median) is that flights arrive a few minutes early.  And 
 
 Those missing values are likely cancelled flights.  What month did they tend to occur?
 
-```{r echo=FALSE}
+```{r echo=TRUE}
 tally(~ month, margin=TRUE, data=filter(sfoflights, is.na(arr_delay)))
 ```
 
@@ -108,7 +108,7 @@ These seem to be most common in July, February, and December.
 
 How should the cancelled flights be handled?  Perhaps they could be recoded as 4 hour (240 minute) delays.  Let's see what a graphical description of the data looks like once we recode them.
 
-```{r echo=FALSE, warning=FALSE}
+```{r echo=TRUE, warning=FALSE}
 sfoflights <- mutate(sfoflights, realdelay = ifelse(is.na(arr_delay), 240, arr_delay))
 densityplot(~ realdelay, group=name, auto.key=TRUE, xlim=c(-120, 300), data=sfoflights)
 ```
@@ -117,7 +117,7 @@ densityplot(~ realdelay, group=name, auto.key=TRUE, xlim=c(-120, 300), data=sfof
 
 We can consider whether the number of flights changes month by month.
 
-```{r, message=FALSE, echo=FALSE}
+```{r, message=FALSE, echo=TRUE}
 library(lubridate)
 sfocounts <- filter(airportcounts, dest=="SFO") %>%
   mutate(Date = ymd(paste(year, "-", month, "-01", sep="")))
@@ -134,7 +134,7 @@ We observe that there are some interesting patterns over the course of the year 
 
 The `nycflights13` package in R includes other data scraped from the Internet (e.g. detailed weather information).  We can display the temperature (in degrees Fahrenheit) on New Year's Day, 2013.
 
-```{r echo=FALSE}
+```{r echo=TRUE}
 head(weather)
 xyplot(temp ~ hour, type=c("p", "l"), 
        ylab="Temperature on\nNew Year's Day", data=filter(weather, month==1 & day==1))
@@ -142,7 +142,7 @@ xyplot(temp ~ hour, type=c("p", "l"),
 
 Let's take a look at daily averages for delays as well as total precipation and maximum wind speed.
 
-```{r, echo=FALSE}
+```{r, echo=TRUE}
 avgdelay <- flights %>%
   group_by(month, day) %>%
   filter(month < 13) %>%
@@ -157,27 +157,27 @@ head(merged)
 ```
 
 A dramatic outlier emerges: windspeeds of 1000 mph are not common!
-```{r, echo=FALSE}
+```{r, echo=TRUE}
 favstats(~ maxwind, data=merged)
 filter(merged, maxwind > 1000)
 ```
 
 Let's remove this outlier and consider the association between any precipiation and average delays.
 
-```{r, echo=FALSE}
+```{r, echo=TRUE}
 merged <- filter(merged, maxwind < 1000)
 bwplot(avgdelay ~ anyprecip, main="Association of delay with any precipitation", data=merged)
 ```
 
 Precipitation seems to be associated with delays.
 
-```{r, echo=FALSE}
+```{r, echo=TRUE}
 xyplot(avgdelay ~ maxwind, type=c("p", "smooth"), data=merged)
 ```
 
 Max windspeed also seems to be associated with delays.
 
-```{r, echo=FALSE}
+```{r, echo=TRUE}
 xyplot(avgdelay ~ maxwind, groups=anyprecip, auto.key=TRUE, type=c("p", "smooth"), data=merged)
 ```
 
@@ -193,7 +193,7 @@ Wickham, H. (2011).  ASA 2009 Data Expo, *Journal of Computational and Graphical
 
 Here is more information on the structure and first few rows of each of the datasets.
 
-```{r, echo=FALSE, eval=TRUE, message=FALSE}
+```{r, echo=TRUE, eval=TRUE, message=FALSE}
 airlines
 airports
 planes
