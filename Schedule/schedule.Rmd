@@ -73,7 +73,7 @@ devtools::install_github("dtkaplan/DCFinteractive")
 
 ### Visualization Quick Start
 
-* [Glyphs and Glyph-ready Data](DataScienceWorkshop/VisualizationQuickStart.html)
+* [Glyphs and Glyph-ready Data](../DataScienceWorkshop/VisualizationQuickStart.html)
 * Activity: Deconstructing graphics. Pick any one: [one](../Handouts/DeconstructingGraphics/G1.pdf), [two](../Handouts/DeconstructingGraphics/G2.pdf), [three](../Handouts/DeconstructingGraphics/G3.pdf), [four](../Handouts/DeconstructingGraphics/G4.pdf), [five](../Handouts/DeconstructingGraphics/G5.pdf), [six](../Handouts/DeconstructingGraphics/G6.pdf), [seven](../Handouts/DeconstructingGraphics/G7.pdf), [eight](../Handouts/DeconstructingGraphics/G8.pdf), [nine](../Handouts/DeconstructingGraphics/G9.pdf), [ten](../Handouts/DeconstructingGraphics/G10.pdf), [eleven](../Handouts/DeconstructingGraphics/G11.pdf), [twelve](../Handouts/DeconstructingGraphics/G11.pdf), [thirteen](../Handouts/DeconstructingGraphics/G13.pdf) <!-- These are from DCF-2015/Book/Worksheets -->
 * Using `mScatter()` [PUT THE LINK TO SLIDES HERE.  Include Exercises.Rmd: GraphicsQuickStart/One] 
     1. Define the frame (faceting also is part of the frame)
@@ -98,19 +98,15 @@ file.edit("USCOTS-01.Rmd")
 
 ### Wrangling Quick Start
 
-1. Minimal R [DTK, 5 min] THE SLIDES WILL GO HERE.
-    * data frames
-    * functions and arguments
-    * piping
-#. Wrangling data verbs vs reduction verbs vs transformation verbs. [DTK, 10 min] THESE WILL BE A FEW SLIDES.  REFER TO THE CHEAT SHEET.
-#. Activity: [What happened to Mary and Jane?](Handouts/WhatHappenedToJane/WhatHappenedToJane.html) Download and edit the template:
+1. [Notes](../DataScienceWorkshop/WranglingQuickStart.html)
+#. Activity: [What happened to Mary and Jane?](../Handouts/WhatHappenedToJane/WhatHappenedToJane.html) Download and edit the template:
     ```{r eval=FALSE}
 download.file(
   "http://dtkaplan.github.io/USCOTS-2015/Handouts/WhatHappenedToJane/WhatHappenedToJane.Rmd",
   dest="WhatHappenedToJane.Rmd")
 file.edit("WhatHappenedToJane.Rmd")
 ```
-    The answers are [here](Handouts/WhatHappenedToJane/WhatHappenedToJane-answers.html)
+    The answers are [here](../Handouts/WhatHappenedToJane/WhatHappenedToJane-answers.html)
 #. [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 ### Mini case study: Bike sharing
