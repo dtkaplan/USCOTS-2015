@@ -132,6 +132,14 @@ Drill on Bike Sharing: Give out Rmarkdown scaffold [DTK] [20 min]
 
 activity: work in groups to do something with dplyr?  (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH]  (join) plus more practice  (20 minutes)
 
+Link to Nick's notes WILL GO HERE
+    ```{r eval=FALSE}
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-nycflights13.Rmd",
+  dest="USCOTS-nycflights13.Rmd")
+file.edit("USCOTS-nycflights13.Rmd")
+```
+
 ### Data Scraping Quick Start
 
 * simple data scraping: reading HTML tables (nuclear reactors) [DTK] Activity??   (20 minutes)
@@ -165,3 +173,9 @@ Link to Danny's notes WILL GO HERE  [DTK]
 ### Text mining 101: for self study [NJH]
 
 Link to Nick's notes WILL GO HERE
+    ```{r eval=FALSE}
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-text.Rmd",
+  dest="USCOTS-text.Rmd")
+file.edit("USCOTS-text.Rmd")
+```
