@@ -900,7 +900,7 @@ Basics of Data Science in R &amp; RStudio
 <span class="glyphicon glyphicon-chevron-down"></span> R source
 </button>
 <pre style=""><code class="source r">update.packages()
-install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13"))
+install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13", "wordcloud", "tm"))
 devtools::install_github("ProjectMOSAIC/mosaic", ref="beta")
 devtools::install_github("dtkaplan/DCF")
 devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
@@ -991,9 +991,18 @@ file.edit("BikeSharingBasics.Rmd")</code></pre>
 </div></li>
 <li>Make sure to compile the unchanged file to HTML. It's best to start with a working document then add small changes, recompile, fix errors as required, add more small changes, recompile, and so on.</li>
 </ol>
+<p>Optional: Join activity: How does the traffic depend on the distance between stations? On how far the station is from downtown?</p>
 <h3>Macro case study: Airline flights database</h3>
 <p>activity: work in groups to do something with dplyr? (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH] (join) plus more practice (20 minutes)</p>
-<p>Optional: Join activity: How does the traffic depend on the distance between stations? On how far the station is from downtown?</p>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-flights.Rmd",
+  dest="USCOTS-flights.Rmd")
+file.edit("USCOTS-flights.Rmd")</code></pre>
+</div>
 <h3>Data Scraping Quick Start</h3>
 <ul>
 <li>simple data scraping: reading HTML tables (nuclear reactors) [DTK] Activity?? (20 minutes)</li>
@@ -1031,7 +1040,15 @@ file.edit("USCOTS-Shiny.Rmd")</code></pre>
 <li>supervised: CART</li>
 </ul>
 <h3>Text mining 101: for self study [NJH]</h3>
-Link to Nick's notes WILL GO HERE
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-text.Rmd",
+  dest="USCOTS-text.Rmd")
+file.edit("USCOTS-text.Rmd")</code></pre>
+</div>
 </div>
 </div>
 <div class="navbar navbar-fixed-bottom navbar-inverse">

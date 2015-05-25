@@ -40,7 +40,7 @@ Come a bit before the official 8:30 am start to get help with these.
     * update and install additional packages, by executing these lines in the R console in RStudio:
         ```{r eval=FALSE}
 update.packages()
-install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13"))
+install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13", "wordcloud", "tm"))
 devtools::install_github("ProjectMOSAIC/mosaic", ref="beta")
 devtools::install_github("dtkaplan/DCF")
 devtools::install_github("dtkaplan/DCFinteractive")
@@ -124,12 +124,20 @@ file.edit("BikeSharingBasics.Rmd")
 ```
 2. Make sure to compile the unchanged file to HTML.  It's best to start with a working document then add small changes, recompile, fix errors as required, add more small changes, recompile, and so on.
 
+Optional: Join activity: How does the traffic depend on the distance between stations?  On how far the station is from downtown?
+
 
 ### Macro case study: Airline flights database
 
 activity: work in groups to do something with dplyr?  (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH]  (join) plus more practice  (20 minutes)
 
-Optional: Join activity: How does the traffic depend on the distance between stations?  On how far the station is from downtown?
+    ```{r eval=FALSE}
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-flights.Rmd",
+  dest="USCOTS-flights.Rmd")
+file.edit("USCOTS-flights.Rmd")
+```
+
 
 ### Data Scraping Quick Start
 
@@ -166,4 +174,9 @@ Link to Danny's notes WILL GO HERE  [DTK]
 
 ### Text mining 101: for self study [NJH]
 
-Link to Nick's notes WILL GO HERE
+    ```{r eval=FALSE}
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-text.Rmd",
+  dest="USCOTS-text.Rmd")
+file.edit("USCOTS-text.Rmd")
+```
