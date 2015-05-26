@@ -1,0 +1,89 @@
+---
+title: ""
+author: ""
+date: ""
+output: ioslides_presentation
+---
+
+## Welcome
+
+This workshop is intended to provide an introduction to data science tools and approaches for instructors with a background in R. The goal is to help identify key capacities for instructors and students to "think with data" while answering a statistical question. Key topics include data wrangling (operations to get data in the right form for graphics), reproducibility, web-scraping, and constructing static and dynamic graphics from data. 
+
+* Nicholas Horton, Amherst College
+* Danny Kaplan, Macalester College
+
+Supported by NSF DUE # 0920350, Project MOSAIC.
+
+#### USCOTS 2015, May 27-28, 2015
+
+
+# Basics of Data Science in R and RStudio
+
+
+## Workshop Objectives
+
+* Introduce you to some key aspects of data science
+    * enough for you to become a plausible, independent data scientist.
+* Help you become proficient with software and techniques for carrying out data science.
+* Help you, as educators to 
+    * use data science to enliven your statistics classes
+    * make informed decisions about the extent to which data science can become part of your institution's curriculum
+
+## What the workshop covers
+
+* The structure of data  [tidy data]
+* Data wrangling to condense and combine data sources to a form suitable for display
+* Visualization, one technique for displaying data informatively
+* "Machine learning"
+* Acquiring data: scraping and cleaning
+* An intro to dynamic, interactive graphics.
+* Reproducible workflow for communicating, updating, and revising your work.
+
+## Some specific systems
+
+Each of the workshop topics is important enough that there is a variety of software implementing approaches to it.
+
+We focus on a particular set of interrelated software tools based in R & RStudio.  This software "stack" is already very widely used professionally and use is growing rapidly.
+
+1. Structure of data: `tidyr` et al.
+#. Wrangling: `dplyr` et al.
+#. Visualization: `ggplot2` et al.
+#. Dynamics graphics: `shiny`
+#. Reproducible workflow: `knitr` & `rmarkdown`
+
+Much less consensus on unified tools for machine learning or for acquiring data. So we use a hodgepodge.  We expect that by USCOTS 2017 these will be fully integrated into the stack.
+
+NB: (1), (2), and (3) are sometimes called the "Hadley Stack."
+
+## What we won't cover (1)
+
+### Statistics
+
+There's a lot of overlap between statistics and data science.  We figure you already know a lot about statistics so we don't cover it here. 
+
+* Statistical tests, e.g., the "Stat 101 Stack"
+* Statistical models, e.g. generalized linear models
+
+But we will do a bit with **machine/statistical learning**
+
+
+## What we won't cover (2)
+
+### Enterprise scale data
+
+* Database design
+* Unstructured data
+* Data large enough that special network techniques are needed.
+* Streaming data
+
+# Logistics and Community
+
+## Resources for this workshop
+
+## Forming teams with a mixture of skills
+
+## Power and internet connectivity
+
+## Getting the computer systems running
+
+

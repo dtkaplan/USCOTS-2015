@@ -106,4 +106,10 @@ Elaboration:
 ### Baby Names
 
 Using the `BabyNames` data table, implement your own version of [this app](http://www.ssa.gov/oact/babynames/#ht=2) from the Social Security Administration.  Note: You will **not** need the "Go" or "Reset" buttons.
+
+### Extracting HTML tables
+
+Given a URL, grab the contents, extract the tables, and let the users view and page through the tables themselves.
+
+
  

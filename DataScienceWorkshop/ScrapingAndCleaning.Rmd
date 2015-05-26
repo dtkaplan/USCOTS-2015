@@ -1,0 +1,75 @@
+---
+title: "Scraping and Cleaning Data"
+author: "Data Computing"
+date: "May 26, 2015"
+output: ioslides_presentation
+---
+
+## Scraping? Cleaning?
+
+**Scraping** refers to the process of acquiring data that have already been formatted for some display purpose.
+
+* Usually it refers to data available via the web, but a file is a file is a file.
+
+**Cleaning** is modifying a data table to
+
+* Correct mistakes such as data-entry blunders & inconsistent coding
+* Put data-table values in a format that can easily be read by mainstream, generic software.
+    * Numerals as numbers, dates & times suitable for sorting and calculation of, e.g., intervals.
+    * Delete extraneous mark-up, e.g. footnote references in Wikipedia tables
+
+## Housekeeping is important!
+
+> *Ninety percent of the time a data scientist is cleaning data.  The other 10% of the time is for complaining about cleaning data.*
+
+In this workshop, we dramatically under-represent data scraping and cleaning compared to it's actual importance.
+
+### Scraping? Cleaning? Wrangling? [;-)]
+
+Can we find other two-syllable metaphors to use in data science? Mopping? Shopping? Packing?  
+
+## Overview of our topics
+
+### Scraping
+
+* Easy wins
+* Web page tables, e.g. wikipedia
+* APIs
+* Not: automatic generation of URLs
+
+### Cleaning
+
+* Re-coding: Example: how many medical specialties are there?
+* Times and dates
+* Regexes, briefly
+
+## Easy Wins
+
+Situations where the data are already in a tidy format, or almost there, and stored in ways that R can easily handle:
+
+* Spreadsheet formats: e.g., CSV, EXCEL, Google Spreadsheets
+    * It's not just `read.csv()` anymore.  `data.table::fread()` handles large data efficiently.  CSVtools in shell.
+    * Read in character strings as such: e.g. `stringsAsFactors=FALSE`. Factors are useful when there is a natural order to categorical levels, but not for lots of other tasks such as cleaning, extraction of substrings, regular expression (regex) processing.
+* Formats from other packages: SAS, SPSS, Stata, Minitab.
+* For more esoteric formats there is often an R package available, e.g. map shape files, geophysics records, ....
+
+## Web page tables
+
+Quiz: What everyday, natural object describes the organization of HTML, XML, JSON, ....?
+
+Trees!
+
+## Public Repositories and APIs
+
+e.g. NYC open data site
+
+If JSON or XML is all that they offer, go for it!
+
+## Generating URLs automatically
+
+* CIA Factbook data
+* ZIP Code data
+
+## Exercises
+
+Develop a strategy for extracting the specified data from each of these sites.
