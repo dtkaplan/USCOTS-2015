@@ -124,8 +124,6 @@ file.edit("BikeSharingBasics.Rmd")
 ```
 2. Make sure to compile the unchanged file to HTML.  It's best to start with a working document then add small changes, recompile, fix errors as required, add more small changes, recompile, and so on.
 
-Optional: Join activity: How does the traffic depend on the distance between stations?  On how far the station is from downtown?
-
 
 ### Macro case study: Airline flights database
 
@@ -179,3 +177,19 @@ download.file(
   dest="USCOTS-text.Rmd")
 file.edit("USCOTS-text.Rmd")
 ```
+
+### Framing Statistical Questions with Data Science
+
+#### Discussion:
+
+1. Your ideas for how you might use this material in your own teaching.
+2. What support do you need moving forward?
+
+#### Examples: 
+
+* Stat 101 .....
+* Modeling ..... <!-- bicycles and the distance from downtown and the distance between stations.
+restaurant inspections and conditional probability -->
+* Probability .....
+
+
