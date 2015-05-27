@@ -61,15 +61,23 @@ Trees!
 
 ## Public Repositories and APIs
 
-e.g. NYC open data site
+### Easy:
 
-If JSON or XML is all that they offer, go for it!
+* <https://data.cityofnewyork.us/> Where are the trees?
+
+### Medium
+
+* http://zipwho.com/
+
+### Hard
+
+* CIA Factbook publication: <https://www.cia.gov/library/publications/download/>
+* ESRI zip codes <http://www.esri.com/data/esri_data/ziptapestry>
 
 ## Generating URLs automatically
 
-* CIA Factbook data
-* ZIP Code data
+* CIA Factbook data, e.g.
+    * <https://www.cia.gov/library/publications/the-world-factbook/geos/ma.html>
+* ZIP Code data, e.g.
+    * <http://zipwho.com/?zip=55116&city=&filters=--_--_--_--&state=&mode=zip>
 
-## Exercises
-
-Develop a strategy for extracting the specified data from each of these sites.

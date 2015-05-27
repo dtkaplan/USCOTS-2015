@@ -34,3 +34,12 @@ ggplot(data=NHANES,aes(x=Age,y=BMI))+geom_point()+aes(colour=Depressed)+facet_wr
 
 
 ## Wrangling Quick Start
+
+
+## Scraping
+
+### One
+
+Develop a strategy for extracting the specified data from each of these sites.
+
+* <https://data.cityofnewyork.us/Environment/Street-Tree-Census-Bronx-/bkyy-g74a>
