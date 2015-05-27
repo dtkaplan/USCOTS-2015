@@ -58,18 +58,18 @@ devtools::install_github("dtkaplan/DCFinteractive")
 1. [Goals, topics, set-up](../DataScienceWorkshop/Welcome.html) <!-- [DTK and NJH, 10 min] -->
 2. Introduce your neighbors, and form teams for workshop activities. [Follow the instructions, here.](form_teams.html) Two to three people per team, with a nice mix of skills. Give your team a name so that we can refer to it. [15 min]
 
-### RStudio
+### Quick Intro to RStudio
 
-* Quick introduction to RStudio [NJH, 5 min]
-
-[OUTLINE TO BE MADE BY NICK, THEN DELETE THESE BULLET POINTS]
-
-* panes, tabs, console, editor?, 
+* mosaic resources
+* panes, tabs, console 
 * Lead through opening a project.  open a project
 * loading packages, install if necessary
 * bringing in data from a package
-* Data frames.  We'll work with ones from `mosaicData`, `DCF`, and `nycflights13` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`
-
+* Data frames.  We'll work with ones from `mosaicData`, `DCF`, and `nycflights13` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`, `head()`
+    ```{r eval=FALSE}
+require(mosaic)
+glimpse(HELPrct)
+```
 
 ### Visualization Quick Start
 
@@ -90,7 +90,8 @@ download.file(
   dest="USCOTS-01.Rmd")
 file.edit("USCOTS-01.Rmd")
 ```
-3. Compile it to HTML.
+3. Add a command to generate a visualization (using the output of `Show Expression` above).
+4. Compile it to HTML.
 4. Publish it. RPubs ID: USCOTS-2015  Password: Written on board. <!-- benchtree -->
     * Cut and paste the corresponding `ggplot2` command from `Show Expression` output in `mplot()` as a chunk into your Rmd file. 
     * Publish to RPubs (user ID: USCOTS-2015)

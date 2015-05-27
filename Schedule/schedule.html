@@ -916,17 +916,21 @@ devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
 <li><a href="../DataScienceWorkshop/Welcome.html">Goals, topics, set-up</a> <!-- [DTK and NJH, 10 min] --></li>
 <li>Introduce your neighbors, and form teams for workshop activities. <a href="form_teams.html">Follow the instructions, here.</a> Two to three people per team, with a nice mix of skills. Give your team a name so that we can refer to it. [15 min]</li>
 </ol>
-<h3>RStudio</h3>
+<h3>Quick Intro to RStudio</h3>
 <ul>
-<li>Quick introduction to RStudio [NJH, 5 min]</li>
-</ul>
-<p>[OUTLINE TO BE MADE BY NICK, THEN DELETE THESE BULLET POINTS]</p>
-<ul>
-<li>panes, tabs, console, editor?,</li>
+<li>mosaic resources</li>
+<li>panes, tabs, console</li>
 <li>Lead through opening a project. open a project</li>
 <li>loading packages, install if necessary</li>
 <li>bringing in data from a package</li>
-<li>Data frames. We'll work with ones from <code>mosaicData</code>, <code>DCF</code>, and <code>nycflights13</code> to begin with. Variables and cases. Quick summaries: <code>glimpse()</code>, <code>nrow()</code>, <code>names()</code></li>
+<li>Data frames. We'll work with ones from <code>mosaicData</code>, <code>DCF</code>, and <code>nycflights13</code> to begin with. Variables and cases. Quick summaries: <code>glimpse()</code>, <code>nrow()</code>, <code>names()</code>, <code>head()</code>
+<div class="row">
+<button class="source R toggle btn btn-xs btn-primary">
+<span class="glyphicon glyphicon-chevron-down"></span> R source
+</button>
+<pre style=""><code class="source r">require(mosaic)
+glimpse(HELPrct)</code></pre>
+</div></li>
 </ul>
 <h3>Visualization Quick Start</h3>
 <ul>
@@ -952,6 +956,7 @@ devtools::install_github("dtkaplan/DCFinteractive")</code></pre>
   dest="USCOTS-01.Rmd")
 file.edit("USCOTS-01.Rmd")</code></pre>
 </div></li>
+<li>Add a command to generate a visualization (using the output of <code>Show Expression</code> above).</li>
 <li>Compile it to HTML.</li>
 <li>Publish it. RPubs ID: USCOTS-2015 Password: Written on board. <!-- benchtree -->
 <ul>
