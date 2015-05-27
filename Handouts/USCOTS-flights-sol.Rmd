@@ -181,7 +181,24 @@ After stratifying by precipitation status, we see that windspeed does not appear
 Your mission: calculate the average delay by destination airport and origin airport for all flights in July, 2013 (hint, use `filter()`, `group_by()`, and `summarise()`).
 
 ```{r}
-# your commands go here
+destdelay <- flights %>%
+  filter(month==7) %>%
+  mutate(realdelay = ifelse(is.na(arr_delay), 240, arr_delay)) %>%
+  group_by(dest, origin) %>%
+  summarise(count = n(), distance = mean(distance), avgdelay = mean(realdelay)) %>% 
+  filter(count > 100) %>%
+  ungroup()
+```
+
+```{r}
+filter(destdelay, dest=="DCA")
+arrange(destdelay, desc(avgdelay))
+```
+
+```{r}
+xyplot(avgdelay ~ distance, type=c("p", "smooth"), data=destdelay)
+xyplot(avgdelay ~ distance, groups=origin, auto.key=TRUE, type=c("p", "smooth"), data=destdelay)
+
 ```
 
 
