@@ -55,7 +55,7 @@ devtools::install_github("dtkaplan/DCFinteractive")
 
 ### Welcome! 
 
-1. [Goals, topics, set-up](../DataScienceWorkshop/Welcome.html) <!-- [DTK and NJH, 10 min] -->
+1. [Goals, topics, set-up](../DataScienceWorkshop/welcome.html) <!-- [DTK and NJH, 10 min] -->
 2. Introduce your neighbors, and form teams for workshop activities. [Follow the instructions, here.](form_teams.html) Two to three people per team, with a nice mix of skills. Give your team a name so that we can refer to it. [15 min]
 
 ### RStudio Quick Start
