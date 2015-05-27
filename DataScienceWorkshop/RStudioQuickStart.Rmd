@@ -1,0 +1,14 @@
+---
+title: "RStudio Quick Start"
+author: "Nicholas Horton"
+date: "May 27, 2015"
+output: html_document
+---
+
+[OUTLINE TO BE MADE BY NICK, THEN DELETE THESE BULLET POINTS]
+
+* panes, tabs, console, editor?, 
+* Lead through opening a project.  open a project
+* loading packages, install if necessary
+* bringing in data from a package
+* Data frames.  We'll work with ones from `mosaicData`, `DCF`, and `nycflights13` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`

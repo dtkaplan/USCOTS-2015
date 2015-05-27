@@ -1,0 +1,65 @@
+---
+title: "Using mScatter"
+author: "Data Computing"
+date: "May 27, 2015"
+output: ioslides_presentation
+---
+
+## Steps for making a graphic
+
+1. Pick a modality
+    - Scatter, density, bar, map
+2. Choose variables for the frame
+    - maps: frame is predefined
+    - densities: y is pre-defined
+    - facets can represent a third variable
+3. Map variables to aesthetics
+    - color, shape, length, 
+    - x & y were mapped when choosing the frame
+4. Refine as needed
+    - x & y axis labels
+    - many others
+    
+## mScatter et al.
+
+These simply provide a mouse-based interface for steps two and three.
+
+* It's still you who has to make the decisions.  
+    `mScatter()` et al. let you evaluate possible choices quickly.
+
+
+
+### Tips
+
+* Take a "small" subset of your data to develop the graphic, e.g. 1000 points.  This will speed up your explorations.
+* When you're finished, you can copy-and-paste the graphic, but better to ...
+* Copy-and-paste the `ggplot2` **command** generated from your choices.
+* You might prefer `mPlot()` from the `mosaic` package.
+
+## Exercise
+
+Make this (awful) graphic with `mScatter()` using the `NHANES::NHANES` data. (You may need to install `NHANES` from CRAN.)
+
+```{r include=FALSE}
+require(NHANES)
+require(DCFinteractive)
+```
+
+```{r echo=FALSE}
+require(NHANES)
+data(NHANES, package = "NHANES")
+require(DCFinteractive)
+```
+
+```{r eval=FALSE, echo=FALSE}
+DCFinteractive::mScatter(NHANES)
+```
+
+```{r echo=FALSE, warning=FALSE}
+ggplot(data=NHANES,aes(x=Age,y=BMI))+geom_point()+aes(colour=Depressed)+facet_wrap(~Smoke100n,ncol=4) 
+```
+
+
+
+    
+    
