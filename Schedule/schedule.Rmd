@@ -102,7 +102,7 @@ file.edit("USCOTS-01.Rmd")
 
 1. [Notes](../DataScienceWorkshop/WranglingQuickStart.html)
 2. Practice with data verbs and `dplyr`: [An interactive app](http://rstudio.calvin.edu:3838/rpruim/dataOps/)
-    * Tasks: [NEED TO BE POSTED, DTK]
+    * Find at least one wrangling operation and setting that is interesting.  [Describe it here](https://docs.google.com/document/d/1XEYhUZj9C468VRAl_SoGuUHL5UVtz0JU6PF5iCPuE6c/edit?usp=sharing).
 #. Activity: [What happened to Mary and Jane?](../Handouts/WhatHappenedToJane/WhatHappenedToJane.html) Download and edit the template:
     ```{r eval=FALSE}
 download.file(
