@@ -68,7 +68,11 @@ devtools::install_github("dtkaplan/DCFinteractive")
 * Data frames.  We'll work with ones from `mosaicData`, `DCF`, and `nycflights13` to begin with. Variables and cases. Quick summaries: `glimpse()`, `nrow()`, `names()`, `head()`
     ```{r eval=FALSE}
 require(mosaic)
-glimpse(HELPrct)
+require(nycflights13)
+glimpse(flights)
+names(airplanes)
+names(airlines)
+names(airports)
 ```
 
 ### Visualization Quick Start
