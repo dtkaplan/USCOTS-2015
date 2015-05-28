@@ -130,7 +130,7 @@ file.edit("BikeSharingBasics.Rmd")
 
 ### Macro case study: Airline flights database
 
-activity: work in groups to do something with dplyr?  (provide scaffolding with stubbed out Rmd file perhaps using nycflights13 [NJH]  (join) plus more practice  (20 minutes)
+More practice with dplyr (plus joins) using the nycflights13 dataset [NJH] (20 minutes)
 
     ```{r eval=FALSE}
 download.file(
@@ -141,7 +141,7 @@ file.edit("USCOTS-flights.Rmd")
 
 ### Shiny and dynamic graphics
 
-* brief introduction to Shiny via Markdown [NJH] (10 minutes)
+* brief introduction to Shiny via Markdown [NJH] (20 minutes) plus [SAT example](https://r.amherst.edu/apps/nhorton/sat/)
 * Activity: customize a default shiny file.  [DTK, 30 min]
     ```{r eval=FALSE}
 download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-Shiny.Rmd",
