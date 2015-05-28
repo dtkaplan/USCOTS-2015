@@ -1,0 +1,70 @@
+---
+title: "Bicycle Destinations"
+author: "Data Computing Fundamentals"
+date: "YOUR NAME HERE"
+output: html_document
+runtime: shiny
+---
+
+```{r include=FALSE}
+require(dplyr)
+require(leaflet)
+```
+
+With almost 400 bike stations, any graphic showing the flow of bike traffic among the stations is bound to be complex, and perhaps uninterpretable.  There's only so much ink you can put down in two dimensions before overlap and confusion becomes the dominant message conveyed by the graphic.
+
+One way to help simplify the presentation is to add a third dimension.  It's not very effective to use a third spatial dimension.  In the end, any image will be projected on to the two-dimension retina of the viewer.  
+
+Instead, the third dimension can be time.  A graphic using time as a third dimension must be dynamic; it must change over time.  Sometimes a moving graphic --- a movie --- works very well.  But it's also possible to have the viewer control the action: interactive graphics.
+
+This document lays out the controls for an interactive graphic of the flows between bike stations.  The user picks a station and the graphic changes to show the flows to and from that station.
+
+Your task is to write the data wrangling logic to make the graph work. You have two data tables to work with: `Stations` and `Trips`.  Here are the statements to read them in.  They are set up to read in a 10,000 case subset of the trips.  If you want to work with the entire data set, just remove the `-Small` from the name of the trips file to read.
+
+```{r, echo=FALSE}
+Trips <- 
+  readRDS("2014-Q4-Trips-History-Data.rds") %>%
+  mutate(hour = lubridate::hour(sdate))
+Stations <- read.csv("DC-Stations.csv", stringsAsFactors = FALSE)
+stationList <- 
+  Trips %>%
+  group_by(sstation) %>% 
+  summarise(count=n()) %>%
+  arrange(desc(count)) %>%
+  .[["sstation"]] %>%
+  as.list()
+inputPanel(
+  selectInput("station", label = "Selected Station:",
+              choices = stationList, selected = stationList[[1]]),
+  sliderInput("hour_range", label = "Time of Day:",
+              min = 0, max = 23, value = c(8,10), step = 1)
+)
+```
+
+
+```{r echo=FALSE}
+renderLeaflet({
+  tmp <- input$hour_range
+  early <- tmp[1]
+  late <- tmp[2]
+  ThisStation <- filter(Stations, name==input$station)
+  StationCounts <-
+    Trips %>%
+  filter(sstation == input$station, 
+         hour >= early, hour <= late) %>%
+  group_by(estation) %>%
+  summarise(count = n()) %>%
+  inner_join(Stations, by=c("estation"="name")) 
+StationMap <- 
+  StationCounts %>%
+  leaflet() %>%   # like ggplot()
+  addTiles() %>%          # add the map
+  addCircles(radius= ~ 10*sqrt(count), color="red", opacity=0.25) %>%
+  addCircleMarkers(radius=1, color="red") %>%
+  addCircleMarkers(radius=5, color="blue", 
+                   lat=ThisStation$lat, lng=ThisStation$long ) %>%
+  setView(ThisStation$long, ThisStation$lat, zoom=13) 
+StationMap
+})
+```
+

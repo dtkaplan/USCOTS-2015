@@ -125,6 +125,7 @@ download.file(
 file.edit("BikeSharingBasics.Rmd")
 ```
 2. Make sure to compile the unchanged file to HTML.  It's best to start with a working document then add small changes, recompile, fix errors as required, add more small changes, recompile, and so on.
+3. Links to answers: [html](../Handouts/BikeSharing/BikeSharingBasics-Answers.html) & [Rmd](../Handouts/BikeSharing/BikeSharingBasics-Answers.Rmd)
 
 
 ### Macro case study: Airline flights database
@@ -138,14 +139,6 @@ download.file(
 file.edit("USCOTS-flights.Rmd")
 ```
 
-### Data Scraping Quick Start
-
-* [The basics](../DataScienceWorkshop/ScrapingAndCleaning.Rmd)(20 minutes)
-* [Scraping nuclear reactors](../Handouts/Project_NuclearReactors.pdf)
-* APIs and gateways.
-
-Other sources of data. Something easy they can do: NYC open data, CDC.  At the level of downloading CSV files. [DTK to find example from Data Computing book.]  Bike sharing? Restaurants?  Scaffold 70% for them and have them do one. Difference between source API and what you write in R. [30 min work, 10 min presentation]
-
 ### Shiny and dynamic graphics
 
 * brief introduction to Shiny via Markdown [NJH] (10 minutes)
@@ -155,6 +148,24 @@ download.file("http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-Shiny.Rmd",
               dest="USCOTS-Shiny.Rmd")
 file.edit("USCOTS-Shiny.Rmd")
 ```
+* Interacting directly with a graphic.  Example: Mapping the bicycle traffic
+    ```{r eval=FALSE}
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/InteractiveMap.Rmd", 
+  dest="InteractiveMap.Rmd")
+file.edit("InteractiveMap.Rmd")
+```
+
+
+
+### Data Scraping Quick Start
+
+* [The basics](../DataScienceWorkshop/ScrapingAndCleaning.Rmd)(20 minutes)
+* [Scraping nuclear reactors](../Handouts/Project_NuclearReactors.pdf)
+* APIs and gateways.
+
+Other sources of data. Something easy they can do: NYC open data, CDC.  At the level of downloading CSV files. [DTK to find example from Data Computing book.]  Bike sharing? Restaurants?  Scaffold 70% for them and have them do one. Difference between source API and what you write in R. [30 min work, 10 min presentation]
+
 
 ### On your own
 
