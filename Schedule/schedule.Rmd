@@ -159,7 +159,7 @@ file.edit("InteractiveMap.Rmd")
 
 ### Data Scraping Quick Start
 
-* [The basics](../DataScienceWorkshop/ScrapingAndCleaning.Rmd)(20 minutes)
+* [The basics](../DataScienceWorkshop/ScrapingAndCleaning.html)(20 minutes)
 * [Scraping nuclear reactors](../Handouts/Project_NuclearReactors.pdf)
 * APIs and gateways.
 * Show and tell: Sources from which you would like to scrape data 
