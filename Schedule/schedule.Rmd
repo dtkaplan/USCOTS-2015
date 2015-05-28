@@ -40,7 +40,7 @@ Come a bit before the official 8:30 am start to get help with these.
     * update and install additional packages, by executing these lines in the R console in RStudio:
         ```{r eval=FALSE}
 update.packages()
-install.packages(c("devtools", "mosaic", "tidyr", "dplyr", "ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13", "wordcloud", "tm"))
+install.packages(c("devtools", "mosaic", "tidyr", "dplyr","ggvis", "rmarkdown", "shiny", "haven", "mosaicData", "manipulate", "babynames", "nycflights13", "wordcloud", "tm", "lubridate"))
 devtools::install_github("ProjectMOSAIC/mosaic", ref="beta")
 devtools::install_github("dtkaplan/DCF")
 devtools::install_github("dtkaplan/DCFinteractive")

@@ -12,6 +12,8 @@ runtime: shiny
 ```{r include=FALSE}
 library(shiny, quietly=TRUE)
 library(DCF, quietly=TRUE)
+if( !require(BicycleSharing) )
+  devtools::install_github("dtkaplan/Data/BicycleSharing")
 knitr::opts_chunk$set(tidy = FALSE)
 ```
 
