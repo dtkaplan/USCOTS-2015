@@ -138,6 +138,7 @@ download.file(
   dest="USCOTS-flights.Rmd")
 file.edit("USCOTS-flights.Rmd")
 ```
+* [Some solutions](../Handouts/USCOTS-flights-sol.html).
 
 ### Shiny and dynamic graphics
 
