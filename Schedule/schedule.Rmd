@@ -161,7 +161,8 @@ file.edit("InteractiveMap.Rmd")
 * [The basics](../DataScienceWorkshop/ScrapingAndCleaning.Rmd)(20 minutes)
 * [Scraping nuclear reactors](../Handouts/Project_NuclearReactors.pdf)
 * APIs and gateways.
-* Show and tell: Sources from which you would like to scrape data  
+* Show and tell: Sources from which you would like to scrape data 
+* An [upcoming on-line seminar](http://pages.rstudio.net/Webinar-June2015_Registration.html?fk_email_clicked=Webinar_-_June_2015&fk_via_email={{lead.Email%20Address:default=null}}&mkt_tok=3RkMMJWWfF9wsRonvqnNZKXonjHpfsX67%2BkoWaC1lMI%2F0ER3fOvrPUfGjI4AS8FrI%2BSLDwEYGJlv6SgFTbDMMa541LgKWxc%3D) from Hadley Wickham.
 
 
 ### Framing Statistical Questions with Data Science
