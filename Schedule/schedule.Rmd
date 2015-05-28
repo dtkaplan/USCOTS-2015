@@ -156,43 +156,13 @@ download.file(
 file.edit("InteractiveMap.Rmd")
 ```
 
-
-
 ### Data Scraping Quick Start
 
 * [The basics](../DataScienceWorkshop/ScrapingAndCleaning.Rmd)(20 minutes)
 * [Scraping nuclear reactors](../Handouts/Project_NuclearReactors.pdf)
 * APIs and gateways.
+* Show and tell: Sources from which you would like to scrape data  
 
-Other sources of data. Something easy they can do: NYC open data, CDC.  At the level of downloading CSV files. [DTK to find example from Data Computing book.]  Bike sharing? Restaurants?  Scaffold 70% for them and have them do one. Difference between source API and what you write in R. [30 min work, 10 min presentation]
-
-
-### On your own
-
-1. Maps
-    * Make a choropleth map. `mWorldMap()`, `mUSMap()`  [DTK] From Data Computing example
-    * Leaflet bicycle map
-2. An [idea for an applied probability project](../Handouts/WhatHappenedToJane/AppliedProbabilityProject.html).
-
-
-### Models and Machine Learning: for self study
-
-Link to Danny's notes WILL GO HERE  [DTK]
-
-* glyph-ready is also model-ready [DTK]
-* lm() glm()
-* “machine learning”
-* unsupervised: car data clustering
-* supervised: CART
-
-### Text mining 101: for self study [NJH]
-
-    ```{r eval=FALSE}
-download.file(
-  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-text.Rmd",
-  dest="USCOTS-text.Rmd")
-file.edit("USCOTS-text.Rmd")
-```
 
 ### Framing Statistical Questions with Data Science
 
@@ -206,6 +176,27 @@ file.edit("USCOTS-text.Rmd")
 * Stat 101 .....
 * Modeling ..... <!-- bicycles and the distance from downtown and the distance between stations.
 restaurant inspections and conditional probability -->
-* Probability .....
+* Probability .... [idea for an applied probability project](../Handouts/WhatHappenedToJane/AppliedProbabilityProject.html).
 
+
+## Topics we didn't have the time to get to.
+
+
+
+### Models and Machine Learning: for self study
+
+* glyph-ready is also model-ready [DTK]
+* lm() & glm(): are they machine learning?
+* “machine learning”
+* unsupervised: car data clustering
+* supervised: CART
+
+### Text mining 101 [NJH]
+
+    ```{r eval=FALSE}
+download.file(
+  "http://dtkaplan.github.io/USCOTS-2015/Handouts/USCOTS-text.Rmd",
+  dest="USCOTS-text.Rmd")
+file.edit("USCOTS-text.Rmd")
+```
 
