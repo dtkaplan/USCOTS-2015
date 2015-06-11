@@ -32,7 +32,7 @@ devtools::install_github("dtkaplan/DCFinteractive")
 
 If you are able to set up the software on your laptop, that will reduce the load on the server and speed up responses for everyone. 
 
-At the workshop, we will be giving you the preview edition of a book: Data Computing. If you would like to glance through the contents before the workshop, a PDF version of the first several chapters is available here. You will need a password to open it: branchtree
+At the workshop, we will be giving you the preview edition of a book: Data Computing. If you would like to glance through the contents before the workshop, a PDF version of the first several chapters is available here. You will need a password to open it.
 
 Again, we look forward to meeting/seeing you at Penn State.  If you have any questions, please don’t hesitate to email Nick at <nhorton@amherst.edu> or Danny at <dtkaplan@gmail.com>.  
 
